@@ -1,0 +1,118 @@
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  margin: auto 12%;
+}
+
+#main {
+  min-height: 0;
+  flex-display: column;
+  display: flex;
+  flex: 1;
+}
+
+#main > article {
+  flex-grow: 1;
+  overflow: auto;
+
+  min-height: 0;
+
+  margin: 10px;
+  margin-right: 0px;
+}
+
+#main > nav { 
+  margin: 10px 0px;
+  overflow: auto;
+  min-height: 0;
+  flex: 0 0 auto;
+  max-width: 15vw;
+}
+
+#main > nav {
+  order: -1;
+}
+
+header {
+  margin-top: 1vh;
+  height: auto;
+}
+
+footer {
+  height: auto;
+}
+
+header, footer, article, nav {
+  padding: 1em;
+}
+
+@media only screen and (max-width: 1250px) {
+  body {
+    margin: auto 1%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  body {
+    margin: 0;
+    height: auto;
+    display: block;
+  }
+
+  #main {
+    display: block;
+    height: auto;
+  }
+  
+  #main > article {
+    margin: 0px;
+    height: auto;
+  }
+
+  #main > nav {
+    margin: 10px 0px;
+    max-width: 100vw;
+    order: 0;
+  }
+  
+  footer {
+  }
+}
+
+@media screen and (max-device-width: 360px) {
+  body {
+    margin: 0;
+    height: auto;
+    display: block;
+  }
+
+  header {
+    margin: 0;
+  }
+
+  #main {
+    display: block;
+    height: auto;
+  }
+  
+  #main > article {
+    margin: 0px;
+    height: auto;
+  }
+
+  #main > nav {
+    margin: 10px 0px;
+    max-width: 100vw;
+    order: 0;
+  }
+  
+  footer {
+  }
+}
+
+@media screen and (max-height: 550px) {
+  body {
+    height: auto;
+  }
+}

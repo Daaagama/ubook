@@ -27,6 +27,10 @@ footer {
   background-color: #263238;
 }
 
+a.footer-repo-link {
+  color: #FFFFFF;
+}
+
 a.button {
   margin: 0px 10px 10px 0px;
   padding: 5px 12px;
@@ -59,6 +63,25 @@ ul.sidebar-nested {
 
 li.nested-header {
   padding-bottom: 5px;
+}
+
+ .lab-code {
+   background-color: #A0E0EF;
+ }
+
+.lab-table, .lab-table tr, .lab-table td {
+  border: 1px solid #333;
+  border-collapse: collapse;
+  background-color: #80DEEA;
+}
+
+form.lab-form {
+  background-color: #80DEEA;
+}
+
+.lab-image {
+  background-color: #80DEEA;
+  padding: 10px;
 }
 
 @media screen and (max-device-width: 360px) {

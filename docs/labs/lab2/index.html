@@ -5,6 +5,7 @@
   <title>Основи Frontend та Backend розробок</title>
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="css/lab2.css">
 </head>
 
 
@@ -31,22 +32,323 @@
     <nav>
       <h2>Лабораторна робота №2</h2>
       <ul class="sidebar">
-        <li><a class="button sidebar-button" href="#">Тема Мета лаби №2</a></li>  
-        <li><a class="button sidebar-button" href="#">Списки</a></li>  
-        <li><a class="button sidebar-button" href="#">Ідентифікатори</a></li>  
-        <li><a class="button sidebar-button" href="#">Відступи</a></li>  
-        <li><a class="button sidebar-button" href="#">Плаваючі елементи</a></li>  
-        <li><a class="button sidebar-button" href="#">Селектори</a></li>  
+        <li><a class="button sidebar-button" href="#subject">Тема Мета лаби №2</a></li>  
+        <li><a class="button sidebar-button" href="#lists">Списки</a></li>  
+        <li><a class="button sidebar-button" href="#ids">Ідентифікатори</a></li>  
+        <li><a class="button sidebar-button" href="#indents">Відступи</a></li>  
+        <li><a class="button sidebar-button" href="#floating-elements">Плаваючі елементи</a></li>  
+        <li><a class="button sidebar-button" href="#selectors">Селектори</a></li>  
         <ul class="sidebar-nested">
-          <li><a class="button sidebar-button" href="#">Селектори тегу и класу</a></li>  
-          <li><a class="button sidebar-button" href="#">Інші селектори</a></li>  
-          <li><a class="button sidebar-button" href="#">Групування селекторів</a></li>  
+          <li><a class="button sidebar-button" href="#selectors-1">Селектори тегу та класу</a></li>  
+          <li><a class="button sidebar-button" href="#selectors-2">Інші селектори</a></li>  
+          <li><a class="button sidebar-button" href="#selectors-3">Групування селекторів</a></li>  
         </ul>
-        <li><a class="button sidebar-button" href="#">Висновки</a></li>  
+        <li><a class="button sidebar-button" href="#conclusion">Висновки</a></li>  
       </ul>
     </nav>
 
     <article>
+      <h2><a name="subject">Тема та мета Лабораторної роботи №2</a></h2>
+        <p>
+        <b>Тема:</b><br>
+        Каскадні таблиці стилів. Селектори. Ідентифікатори.
+        Стильове оформлення текстових елементів в HTML-документах.
+        </p>
+
+        <p>
+        <b>Мета:</b></br>
+        Здобути практичні навички роботи з селекторами, ідентифікаторами,
+        списками, різноманітними властивостями кольору і фону, зовнішніми
+        та внутрішніми відступами, плаваючими елементами, оформленням
+        текстових елементів.
+        </p>
+
+        <h3>Місце розташування лабораторних робіт</h3>
+        <p class="m-2">
+          <a href="https://github.com/drewg3r/ubook">Посилання на репозиторій</a>
+        </p>
+      <h2><a name="lists">Списки</a></h2>
+        <p>
+        Приклад невпорядкованого трирівневого списку:
+        <ul>
+          <li>Елемент 1</li>
+          <li>Елемент 2</li>
+          <li>Елемент 3</li>
+          <ul>
+            <li>Елемент 3.1</li>
+            <li>Елемент 3.2</li>
+            <li>Елемент 3.3</li>
+              <ul>
+                <li>Елемент 3.3.1</li>
+                <li>Елемент 3.3.2</li>
+              </ul>
+            <li>Елемент 3.4</li>
+            <li>Елемент 3.5</li>
+          </ul>
+          <li>Елемент 4</li>
+          <li>Елемент 5</li>
+        </ul>
+        </p>
+
+        <p>
+        <b>Код</b>
+          <code>
+            <pre class="m-1">
+    &lt;ul&gt;
+      &lt;li&gt;Елемент 1&lt;/li&gt;
+      &lt;li&gt;Елемент 2&lt;/li&gt;
+      &lt;li&gt;Елемент 3&lt;/li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Елемент 3.1&lt;/li&gt;
+        &lt;li&gt;Елемент 3.2&lt;/li&gt;
+        &lt;li&gt;Елемент 3.3&lt;/li&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Елемент 3.3.1&lt;/li&gt;
+            &lt;li&gt;Елемент 3.3.2&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;li&gt;Елемент 3.4&lt;/li&gt;
+        &lt;li&gt;Елемент 3.5&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;li&gt;Елемент 4&lt;/li&gt;
+      &lt;li&gt;Елемент 5&lt;/li&gt;
+    &lt;/ul&gt;</pre>
+          </code>
+        </p>
+        
+        <p>
+        Приклад впорядкованого дворівневого списку:
+        <ol>
+          <li>Елемент 1</li>
+          <li>Елемент 2</li>
+          <li>Елемент 3</li>
+          <ol>
+            <li>Елемент 3.1</li>
+            <li>Елемент 3.2</li>
+            <li>Елемент 3.3</li>
+            <li>Елемент 3.4</li>
+            <li>Елемент 3.5</li>
+          </ol>
+          <li>Елемент 4</li>
+          <li>Елемент 5</li>
+        </ol>
+        </p>
+
+        <p>
+        <b>Код</b>
+          <code>
+            <pre class="m-1">
+    &lt;ol&gt;
+      &lt;li&gt;Елемент 1&lt;/li&gt;
+      &lt;li&gt;Елемент 2&lt;/li&gt;
+      &lt;li&gt;Елемент 3&lt;/li&gt;
+      &lt;ol&gt;
+        &lt;li&gt;Елемент 3.1&lt;/li&gt;
+        &lt;li&gt;Елемент 3.2&lt;/li&gt;
+        &lt;li&gt;Елемент 3.3&lt;/li&gt;
+        &lt;li&gt;Елемент 3.4&lt;/li&gt;
+        &lt;li&gt;Елемент 3.5&lt;/li&gt;
+      &lt;/ol&gt;
+      &lt;li&gt;Елемент 4&lt;/li&gt;
+      &lt;li&gt;Елемент 5&lt;/li&gt;
+    &lt;/ol&gt;</pre>
+          </code>
+        </p>
+
+        <p>
+        Приклад стилізації списку:
+        </p>
+
+        <ol class="m-1 lab2-list" reversed>
+          <li>Елемент 1</li>
+          <li>Елемент 2</li>
+          <li>Елемент 3</li>
+          <li>Елемент 4</li>
+          <li>Елемент 5</li>
+        </ol>
+
+        <p>
+        <b>Код</b>
+          <code>
+            <pre class="m-1">
+    .lab2-list {
+      list-style-type: upper-roman;
+      list-style-position: inside;
+    }
+
+    .lab2-list li::marker {
+      color: red;
+    }</pre>
+          </code>
+        </p>
+      <h2><a name="ids">Ідентифікатори</a></h2>
+      <p>
+        В якості прикладу використання ідентифікаторів наводимо дизайн кнопки.
+      </p>
+      
+      <button id="lab2-button" class="m-1">Тестова кнопка</button>
+
+        <p>
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-1">
+    &lt;button id=&#34;lab2-button&#34; class=&#34;m-1&#34;&gt;Тестова кнопка&lt;/button&gt;</pre>
+          </code>
+        </p>
+
+        <p>
+        <b>CSS-код</b>
+          <code>
+            <pre class="m-1">
+    #lab2-button {
+      padding: 5px 15px;
+      background-color: #a5d6a7;
+      border: 2px solid #333;
+      border-radius: 15px;
+    }
+
+    #lab2-button:hover {
+      background-color: #c3f5c5;
+    }</pre>
+          </code>
+        </p>
+      <h2><a name="indents">Відступи</a></h2>
+        <div class="lab2-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed convallis
+        enim, at euismod velit. Ut risus felis, mollis ut purus vitae, feugiat bibendum
+        nisl. Nunc tincidunt ultricies felis, non rhoncus lectus efficitur ut. Fusce at
+        dui nisi. Cras gravida sapien interdum, vulputate nunc at, tempor tellus.
+        Vestibulum pharetra convallis libero vitae placerat. Nunc ac hendrerit leo.
+        Integer aliquet nulla at turpis tincidunt, quis euismod velit ultricies.
+        Phasellus vitae ex ante. Aenean tincidunt ipsum at magna cursus fringilla.
+        Curabitur posuere dolor odio, eu consequat ipsum accumsan in. Aliquam auctor
+        vitae velit vitae interdum. Suspendisse potenti. In iaculis efficitur sapien,
+        vitae faucibus velit. 
+        </div>
+
+        <p>
+        <b>CSS-код</b>
+          <code>
+            <pre class="m-1">
+    .lab2-text {
+      background-color: #a5d6a7;
+      margin-left: 1.5em;
+      padding: 1em 1em 1em 2em;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+
+    .lab2-text::first-letter {
+      margin-right: 0.15em;
+      margin-bottom: 0px;
+      font-family: "TeX Gyre Chorus";
+      font-size: 250%;
+    }</pre>
+          </code>
+        </p>
+
+      <h2><a name="floating-elements">Плаваючі елементи</a></h2>
+        <img src="img/books.png" class="lab2-floating" width=50px>
+        <div class="lab2-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed convallis
+        enim, at euismod velit. Ut risus felis, mollis ut purus vitae, feugiat bibendum
+        nisl. Nunc tincidunt ultricies felis, non rhoncus lectus efficitur ut. Fusce at
+        dui nisi. Cras gravida sapien interdum, vulputate nunc at, tempor tellus.
+        Vestibulum pharetra convallis libero vitae placerat. Nunc ac hendrerit leo.
+        Integer aliquet nulla at turpis tincidunt, quis euismod velit ultricies.
+        Phasellus vitae ex ante. Aenean tincidunt ipsum at magna cursus fringilla.
+        Curabitur posuere dolor odio, eu consequat ipsum accumsan in. Aliquam auctor
+        vitae velit vitae interdum. Suspendisse potenti. In iaculis efficitur sapien,
+        vitae faucibus velit. 
+        </div>
+
+        <p>
+        <b>CSS-код</b>
+          <code>
+            <pre class="m-1">
+    .lab2-floating {
+      margin: 1.5em 1em 0em 2em;
+      float: left;
+      height: 100px;
+      width: 120px;
+    }</pre>
+          </code>
+        </p>
+
+
+      <h2><a name="selectors">Селектори</a></h2>
+        <h3><a name="selectors-1">Селектори тегу та класу</a></h3>
+          <p class="m-2">
+            Приклад використання селектору тегу:
+              <code>
+                <pre class="m-1">
+    pre {
+      padding: 1em;
+      background-color: #f6f8fa;
+      font-size: 1.2em;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }</pre>
+              </code>
+
+            Приклад використання селектору класу:
+              <code>
+                <pre class="m-1">
+    a.button {
+      margin: 0px 10px 5px 0px;
+      padding: 5px 12px;
+      display: inline-block;
+      text-decoration: none;
+      color: #B2EBF2;
+      background-color: #673AB7;
+      border: 0px solid #333;
+      border-radius: 7px;
+
+      display: block;
+    }</pre>
+              </code>
+
+          </p>
+        <h3><a name="selectors-2">Інші селектори</a></h3>
+          <p class="m-2">
+          Приклад використання дочірнього селектору:
+              <code>
+                <pre class="m-1">
+    .lab2-list li::marker {
+      color: red;
+    }</pre>
+              </code>
+          </p>
+
+          <p class="m-2">
+          Приклад використання універсального селектору:
+              <code>
+                <pre class="m-1">
+    * {
+      color: #B3E5FC;
+    }</pre>
+              </code>
+          </p>
+        <h3><a name="selectors-3">Групування селекторів</a></h3>
+          <p class="m-2">
+          Приклад групування селекторів:
+              <code>
+                <pre class="m-1">
+    .lab-table, .lab-table tr, .lab-table td {
+      border: 1px solid #333;
+      border-collapse: collapse;
+      background-color: #80DEEA;
+    }</pre>
+              </code>
+          </p>
+      <h2><a name="conclusion">Висновки</a></h2>
+        <p class="m-1">
+          В процесі виконання роботи було здобуто практичні навички роботи з селекторами,
+          ідентифікаторами, списками, різноманітними властивостями кольору і фону,
+          зовнішніми та внутрішніми відступами, плаваючими елементами, оформленням
+          текстових елементів.
+          </p>
+
+        </p>
     </article>
     </div>
 

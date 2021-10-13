@@ -84,6 +84,23 @@ form.lab-form {
   padding: 10px;
 }
 
+p {
+  margin-left: 1.5em;
+  padding: 0px;
+}
+
+article > h3 {
+  margin-left: 1.5em;
+}
+
+pre {
+  padding: 1em;
+  background-color: #f6f8fa;
+  font-size: 1.2em;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
 @media screen and (max-device-width: 360px) {
   h1.top-header {
     color: #212121;

@@ -1,6 +1,6 @@
 body {
   font-family: Roboto;
-  background-color: #B2EBF2;
+  background-color: #84FFFF;
 }
 
 h1.top-header {
@@ -18,7 +18,7 @@ nav {
 }
 
 article {
-  background-color: #B2EBF2;
+  background-color: #84FFFF;
   border: 1px solid #333;
 }
 
@@ -82,6 +82,23 @@ form.lab-form {
 .lab-image {
   background-color: #80DEEA;
   padding: 10px;
+}
+
+p {
+  margin-left: 1.5em;
+  padding: 0px;
+}
+
+article > h3 {
+  margin-left: 1.5em;
+}
+
+pre {
+  padding: 1em;
+  background-color: #f6f8fa;
+  font-size: 1.2em;
+  border: 1px solid #333;
+  border-radius: 5px;
 }
 
 @media screen and (max-device-width: 360px) {

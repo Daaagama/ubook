@@ -8,76 +8,112 @@
         <!-- favicon-->
         <link rel="shortcut icon" href="https://owu.com.ua/image/faviconx.ico" type="image/x-icon">
 
-<!--        <link rel="stylesheet"-->
-<!--              href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700, 700i,800,800i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese">-->
-
-
         <!--my styles-->
         <link href="index_files/style.css" rel="stylesheet">
         <!--my styles-->
 
         <link rel="stylesheet" href="index_files/media.css">
-<style>
-
-        header {
-            width: 100%;
-            height: 70px;
-            background: #FFFFFF;
-            -webkit-transition: height 1s;
-            -o-transition: height 1s;
-            transition: height 1s;
-        }
-        .wrapper-top {
-            height: 100%;
-            align-items: center;
-            justify-content: space-between; /*flex*/
-        }
-        .header-menu > nav > ul > li {
-            display: flex;
-            align-items: center;
-            position: relative;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-        .flex-d {
-            display: flex !important;
-        }
-        .wrapper {
-            max-width: calc(1246px + 30px + 30px);
-            width: 100%;
-            padding-right: 30px;
-            padding-left: 30px;
-            margin: 0 auto;
-            position: relative;
-            height: 100%;
-</style>
 
         <title>Курс React програмування Львів Київ Онлайн.</title>
 </head>
 
 <body>
+    
+<style>
+  nav {
+    font-size: 17px;
+    font-family: Arial;
+  }
+  
+  .topnav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+  }
+  
+  .topnav a {
+    min-width: 15%;
+    margin: 0 5px;
+    background-color: #111;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .topnav a:hover {
+    background-color: skyblue;
+    color: black;
+  }
+  
+  select {
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: url(https://cdn-icons-png.flaticon.com/512/226/226172.png) no-repeat right;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+    font-size: 17px;
+    font-family: Arial;
+  }
+  
+  select:hover {
+    background-color: skyblue;
+    color: black;
+  }
+  
+  
+  option {
+    background-color: #333;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+  }
 
-    <header class="fixed-top headers">
-        <div class="wrapper">
-            <div class="wrapper-top flex-d justify-content-between">
-                <div class="header-menu-content flex-d">
-                    <div class="header-menu">
-                        <nav>
-                            <ul class="nav-menu d-flex">
-                                <li><a href="" style="background-color: #212529; color: white;">Форми навчання</a></li>
-                                <li><a href="" style="background-color: #212529; color: white;">Заходи</a></li>
-                                <li><a href="" style="background-color: #212529; color: white;">Про академію</a></li>
-                                <li><a href="" style="background-color: #212529; color: white;">Контакти</a></li>
-								<li class="nav-menu-has-children" style="background-color: #212529; color: white;">Київ</li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+</style>
 
 <main class="main" id="react">
+
+    <body>
+      <nav class="navbar">
+        <div class="topnav">
+            <a href="" class="navbar-item">
+                  Форми навчання
+            </a>
+            <a href="" class="navbar-item">
+                  Заходи
+            </a>
+            <a href="" class="navbar-item">
+                  Про Академію
+            </a>
+            <a href="" class="navbar-item">
+                  Контакти
+            </a>
+            <a class="navbar-dropdown">
+              <select class="dropdown-content">
+                <option href="">Київ</option>
+                <option href="">Львів</option>
+                <option href="">Чернігів</option>
+                <option href="">Харків</option>
+                <option href="">Одеса</option>
+              </select>
+              <div class="">
+                
+              </div>
+                  
+            </a>
+        </div>
+      </nav>
+    </body>
 
 
 
@@ -117,15 +153,6 @@
                         <input type="radio" name="tabs" id="tab3">
                         <label class="desk" href="#desk" for="tab3" role="tab" aria-selected="false" aria-controls="panel3" tabindex="0">state &amp; props</label>
                         <div id="tab-content3" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
-                            <!--                                        <div>-->
-                            <!--                                            <div class="list-content">-->
-                            <!--                                                <div class="list-content-text">-->
-                            <!--                                                    Що таке react component, чому він виглядає як html і чому вона по-->
-                            <!--                                                    факту ним-->
-                            <!--                                                    не є.-->
-                            <!--                                                </div>-->
-                            <!--                                            </div>-->
-                            <!--                                        </div>-->
                         </div>
                     </li>
 
@@ -133,14 +160,6 @@
                         <input type="radio" name="tabs" id="tab4">
                         <label class="desk" href="#desk" for="tab4" role="tab" aria-selected="false" aria-controls="panel4" tabindex="0">Data forwarding &amp; props drilling</label>
                         <div id="tab-content4" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
-                            <!--                                        <div>-->
-                            <!--                                            <div class="list-content">-->
-                            <!--                                                <div class="list-content-text">-->
-                            <!--                                                    Функціональні компоненти. Переваги та недоліки подібних компонентів-->
-                            <!--                                                    в react.-->
-                            <!--                                                </div>-->
-                            <!--                                            </div>-->
-                            <!--                                        </div>-->
                         </div>
                     </li>
 
@@ -148,13 +167,6 @@
                         <input type="radio" name="tabs" id="tab5">
                         <label class="desk" href="#desk" for="tab5" role="tab" aria-selected="false" aria-controls="panel5" tabindex="0">lifecycle hooks</label>
                         <div id="tab-content5" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
-                            <!--                                        <div>-->
-                            <!--                                            <div class="list-content">-->
-                            <!--                                                <div class="list-content-text">-->
-                            <!--                                                    Класові компоненти. Переваги та недоліки.-->
-                            <!--                                                </div>-->
-                            <!--                                            </div>-->
-                            <!--                                        </div>-->
                         </div>
                     </li>
 
@@ -162,13 +174,6 @@
                         <input type="radio" name="tabs" id="tab6">
                         <label class="desk" href="#desk" for="tab6" role="tab" aria-selected="false" aria-controls="panel6" tabindex="0">Функціональні компоненти</label>
                         <div id="tab-content6" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
-                            <!--                                        <div>-->
-                            <!--                                            <div class="list-content">-->
-                            <!--                                                <div class="list-content-text">-->
-                            <!--                                                    Що таке props? Для чого вони потрібні?-->
-                            <!--                                                </div>-->
-                            <!--                                            </div>-->
-                            <!--                                        </div>-->
                         </div>
                     </li>
 
@@ -176,15 +181,6 @@
                         <input type="radio" name="tabs" id="tab7">
                         <label class="desk" href="#desk" for="tab7" role="tab" aria-selected="false" aria-controls="panel7" tabindex="0">Routing</label>
                         <div id="tab-content7" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
-                            <!--                                        <div>-->
-                            <!--                                            <div class="list-content">-->
-                            <!--                                                <div class="list-content-text">-->
-                            <!--                                                    Що таке state, чим відрізняється від props і чому ці два аспекти-->
-                            <!--                                                    react є-->
-                            <!--                                                    ключовими.-->
-                            <!--                                                </div>-->
-                            <!--                                            </div>-->
-                            <!--                                        </div>-->
                         </div>
                     </li>
 
@@ -192,14 +188,6 @@
                         <input type="radio" name="tabs" id="tab8">
                         <label class="desk" href="#desk" for="tab8" role="tab" aria-selected="false" aria-controls="panel8" tabindex="0">Hooks</label>
                         <div id="tab-content8" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
-                            <!--                                        <div>-->
-                            <!--                                            <div class="list-content">-->
-                            <!--                                                <div class="list-content-text">-->
-                            <!--                                                    Робота з DOM і refs, як альтернативний спосіб звернення до DOM-->
-                            <!--                                                    елементів.-->
-                            <!--                                                </div>-->
-                            <!--                                            </div>-->
-                            <!--                                        </div>-->
                         </div>
                     </li>
 
@@ -373,14 +361,6 @@
             display: flex;
             justify-content: space-between;
         }
-
-        /*.form-input form input[name='phone'], .form-input-mob form input[name='phone'] {*/
-        /*    width: 65%;*/
-        /*}*/
-
-        /*.form-input form input[name='age'], .form-input-mob form input[name='age'] {*/
-        /*    width: 33%;*/
-        /*}*/
 
         .form-input form input, .form-input-mob form input {
             width: 100%;
@@ -818,42 +798,6 @@
     <script src="index_files/inputmask.js"></script>
     <script src="index_files/form-validate.js"></script>
 
-    <script>
-
-		function bindGtag(selector, priceSelector, titleSelector, courseFormat, device) {
-
-			let forms = document.querySelectorAll(selector);
-			console.log(forms);
-			for (const formItem of forms) {
-				const coursePrice = +formItem.querySelector(priceSelector).innerText.replace(' ', '').split(' ')[0];
-				const courseType = formItem.querySelector(titleSelector).innerText;
-
-				const course = 'React';
-				const event_label = course + '_' + courseFormat + '_' + courseType;
-
-				const form = formItem.querySelector('form');
-				if (form) {
-
-
-					form.addEventListener('submit', () => {
-						gtag('event', course + '_' + courseFormat, {
-							'event_category': 'submit',
-							'event_label': courseType,
-							'value': coursePrice
-						});
-
-					});
-
-				}
-			}
-		}
-
-		bindGtag('#course_type_stationary .wrap-form-item .form-item:not(.incubator)', '.form-price', '.form-item-title', 'static', 'desktop');
-		bindGtag('#course_type_online .wrap-form-item-online .form-item:not(.incubator)', '.form-price', '.form-item-title', 'online', 'desktop');
-
-    </script>
-
-
     </div>
 
     <section id="recording" class="bg_blue">
@@ -951,238 +895,10 @@
 <script src="index_files/main.js"></script>
 <script src="index_files/react.js"></script>
 
-
-    <style>
-        .video-overlay {
-            position: fixed; /* фиксированное положение */
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.5); /* цвет фона */
-            z-index: 1050;
-            opacity: 0; /* по умолчанию модальное окно прозрачно */
-            -webkit-transition: opacity 200ms ease-in;
-            -moz-transition: opacity 200ms ease-in;
-            transition: opacity 200ms ease-in; /* анимация перехода */
-            pointer-events: none; /* элемент невидим для событий мыши */
-            margin: 0;
-            padding: 0;
-        }
-
-        .video-overlay.is-active {
-            opacity: 1; /* делаем окно видимым */
-            pointer-events: auto; /* элемент видим для событий мыши */
-            overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
-        }
-
-        .close_video, .video-overlay-close {
-            position: absolute;
-            z-index: 9999;
-            top: 50px;
-            right: 50px;
-            line-height: 1;
-            color: #ffffff;
-            text-decoration: none;
-            cursor: pointer;
-            transition: color 500ms;
-            font-size: 50px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .close_video:hover, .video-overlay-close:hover {
-            color: #ff9638;
-        }
-
-        .video-overlay iframe {
-            width: 50%;
-            height: 50vh;
-        }
-
-        .video-overlay iframe {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
-        }
-
-        @media screen and (max-width: 1024px) {
-            .video-overlay iframe {
-                width: 90%;
-            }
-
-        }
-
     </style>
 
     <div id="video-overlay" class="video-overlay">
         <span class="close_video">×</span>
     </div>
-
-    <script>
-		let videoOverlay = document.querySelector('#video-overlay');
-
-		function playMobile(play) {
-			play.forEach((el) => {
-				//         el.onclick = () => {
-				//             let id = el.children[0].dataset.id;
-				//             let videoReviewWrap = '';
-				//             videoOverlay.classList.add('is-active');
-				//             videoReviewWrap = `
-				//     <iframe width="500" height="360" src="https://youtube.com/embed/${id}"
-				//                             frameborder="0"
-				//                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-				//                             allowfullscreen id="Youtube"></iframe>
-				// `;
-				//
-				//             videoOverlay.innerHTML += videoReviewWrap;
-				//
-				//         }
-				el.onclick = () => videoWindow(el, videoOverlay);
-			});
-		}
-
-		playMobile(document.querySelectorAll('.play_button__content'));
-		playMobile(document.querySelectorAll('.video-play-center'));
-		playMobile(document.querySelectorAll('.project-item'));
-
-		let stopVideos = function () {
-			let videos = document.querySelectorAll('.iframe-video, video');
-			Array.prototype.forEach.call(videos, function (video) {
-				if (video.tagName.toLowerCase() === 'video') {
-					video.pause();
-				} else {
-					let src = video.src;
-					video.src = src;
-				}
-			});
-		};
-
-		videoOverlay.onclick = function () {
-			this.classList.remove('is-active');
-			stopVideos();
-		};
-    </script>
-
-
-<!--to -> thank-page.php-->
-
-    <style>
-        .body-popap {
-            position: fixed;
-            z-index: -1;
-            left: 0;
-            right: 0;
-            top: 0;
-            background: rgba(0, 0, 0, .8);
-            height: 100vh;
-            opacity: 0;
-            transition: opacity .5s;
-        }
-
-        .body-popap.is-active {
-            opacity: 1;
-            z-index: 9999;
-        }
-
-        .window-modal {
-            width: 575px;
-            padding: 45px 0 65px;
-            background: #292929;
-            color: #FFFFFF;
-        }
-
-        .modal-contain {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        .title-modal {
-            margin-bottom: 35px;
-            font-weight: 900;
-            font-size: 21px;
-            line-height: 26px;
-            text-align: center;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .window-modal .forms input {
-            width: 100%;
-        }
-
-        .forms input {
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px solid #ffffff;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 60px;
-            color: #ffffff;
-        }
-
-        .forms input:hover {
-            border-bottom: 1px solid #FF9638;
-        }
-
-        .forms input:focus {
-            outline: none;
-        }
-
-        button.modal-btn {
-            font-weight: bold;
-            font-size: 16px;
-            line-height: 60px;
-            text-transform: uppercase;
-            color: #292929;
-            width: 100%;
-            background: #FFE200;
-            border: 2px solid #FFE200;
-            box-sizing: border-box;
-            border-radius: 6px;
-            margin-top: 50px;
-            cursor: pointer;
-        }
-    </style>
-
-    <div class="body-popap flex-center" id="callback">
-
-        <div class="window-modal">
-            <span class="video-overlay-close">×</span>
-            <div class="container">
-                <div class="modal-contain">
-                    <h2 class="title-modal">
-                        перетелефонуйте мені
-                    </h2>
-                    <div class="forms">
-                        <form action="thank-page-consultation" method="post">
-                            <input required="" type="text" placeholder="Ім'я" name="name">
-                            <input type="text" placeholder="Прізвище" name="surname">
-                            <input id="inputCallBackPhone" required="" type="text" placeholder="0671231212" name="phone">
-                            <button class="modal-btn" type="submit">надіслати</button>
-                        <input name="utm" type="hidden"></form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-		setUtmToHiddenInput();
-		const inputCallBackPhone = document.querySelector('#inputCallBackPhone');
-        console.log(inputCallBackPhone);
-        let imCallback = new Inputmask('0(99)999-99-99');
-        imCallback.mask(inputCallBackPhone);
-		document.querySelectorAll('.call').forEach(el => {
-			el.onclick = () => document.querySelector('.body-popap').classList.toggle('is-active');
-		});
-		closeWindow('.video-overlay-close');
-
-    </script>
-
-
-
 
 </body></html>

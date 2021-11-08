@@ -1,0 +1,2597 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <!-- favicon-->
+        <link rel="shortcut icon" href="https://owu.com.ua/image/faviconx.ico" type="image/x-icon">
+
+<!--        <link rel="stylesheet"-->
+<!--              href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700, 700i,800,800i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese">-->
+
+
+        <!--my styles-->
+        <link href="index_files/style.css" rel="stylesheet">
+        <!--my styles-->
+
+        <link rel="stylesheet" href="index_files/media.css">
+
+        <script async="" src="index_files/fbevents.js"></script><script>
+			!function (f, b, e, v, n, t, s) {
+				if (f.fbq) return;
+				n = f.fbq = function () {
+					n.callMethod ?
+						n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+				};
+				if (!f._fbq) f._fbq = n;
+				n.push = n;
+				n.loaded = !0;
+				n.version = '2.0';
+				n.queue = [];
+				t = b.createElement(e);
+				t.async = !0;
+				t.src = v;
+				s = b.getElementsByTagName(e)[0];
+				s.parentNode.insertBefore(t, s);
+			}(window, document, 'script',
+				'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '256016011460201');
+			fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" style="display:none"
+                 src="https://www.facebook.com/tr?id=256016011460201&ev=PageView&noscript=1"/>
+        </noscript>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="index_files/js"></script>
+        <script>
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+
+			gtag('js', new Date());
+
+			gtag('config', 'UA-104501125-1');
+        </script>
+
+        <title>Курс Java програмування Львів та Онлайн.</title>
+<meta name="description" content="Курс Java у Львові та Онлайн об'ємом  до 1048 годин. Гарантія працевлаштування, стажування в ІТ-компанії | Node.JS, Python, Django, Java, Spring Boot, Hibernate, MySQL, MongoDB, JavaScript, React, Angular, HTML, CSS, AWS, Docker, Nginx">
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Курс Java Complex",
+        "image": "https://owu.com.ua/image/svg/java.svg",
+        "description": "Найбільший курс Java з працевлаштуванням в Україні",
+        "brand": "OKTEN",
+        "offers": {
+            "@type": "Offer",
+            "url": "https://owu.com.ua/kurs-java",
+            "priceCurrency": "UAH",
+            "price": "16500",
+            "priceValidUntil": "2021-12-31",
+            "availability": "https://schema.org/Discontinued"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "5",
+            "ratingCount": "985"
+        },
+        "reviews": [
+            {
+                "@type": "Review",
+                "reviewBody": "Класний курс, стажування в іт-компанії - це взагалі овер круто!",
+                "author": {
+                    "@type": "Person",
+                    "name": "Іра Гук"
+                },
+                "name": "Чудовий курс",
+                "datePublished": "2021-02-01",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                }
+            },
+            {
+                "@type": "Review",
+                "reviewBody": "Чудові курси, з прекрасними менторами і відношенням до студентів, та своєї роботи",
+                "author": {
+                    "@type": "Person",
+                    "name": "Олена Лукаш"
+                },
+                "name": "Просто супер!",
+                "datePublished": "2020-12-06",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                }
+            }
+        ]
+    }
+</script>
+</head>
+
+<body>
+
+
+    <style>
+        /*nav menu*/
+        .nav-menu, .nav_item {
+            height: 100%;
+        }
+
+        /*Menu*/
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+        }
+
+        .header {
+            width: 100%;
+            height: 70px;
+            background: #FFFFFF;
+            -webkit-transition: height 1s;
+            -o-transition: height 1s;
+            transition: height 1s;
+        }
+
+        .header .dropdown-menu li {
+            opacity: 1 !important;
+        }
+
+        .header-logo-item a {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-item img {
+            transition: all 1s;
+            margin-right: 10px;
+            height: 60px;
+        }
+
+        .wrapper-top {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-menu .nav_item {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .nav_item, .nav_item a {
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #292929;
+            position: relative;
+            z-index: 66;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav_item {
+            margin: 0 15px;
+        }
+
+        .marker-map {
+            position: absolute;
+            left: -15px;
+            color: #0d77cb;
+        }
+
+        .phone-number a {
+            font-size: calc(23px * 0.8);
+            font-weight: 900;
+            color: #0d77cb;
+        }
+
+        .header-menu .nav-menu-has-children {
+            margin-right: 30px;
+        }
+
+
+        header.small {
+            height: 40px;
+            background: rgba(249, 249, 249, .85);
+        }
+
+        header.small .header-logo-item img {
+            transform: scale(0.6);
+        }
+
+        .small .dropdown-menu {
+            top: 97%;
+        }
+
+        .small .header-callback button {
+            transform: scale(0.8);
+        }
+
+        .small .c-hamburger {
+            top: -12px;
+        }
+
+        .small .menu-mobile {
+            top: 39px;
+            height: 97vh;
+        }
+
+        .nav-menu {
+            display: flex;
+            grid-template-columns: repeat(auto-fill, 1fr);
+            justify-content: space-around;
+            /*column-gap: 30px;*/
+            align-items: center;
+        }
+
+        /*dropdown menu*/
+        ul.dropdown-menu {
+            top: 97%;
+            left: -28px;
+            border-left: 1px solid #49B3FB;
+            border-right: 1px solid #49B3FB;
+            border-bottom: 1px solid #49B3FB;
+            padding: 0.8rem 0;
+            background: #F9F9F9;
+            position: absolute;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 10rem;
+            margin: .125rem 0 0;
+            font-size: 1rem;
+            color: #212529;
+            text-align: left;
+            list-style: none;
+            background-clip: padding-box;
+            border-radius: .25rem;
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu a {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #292929;
+            display: block;
+            position: relative;
+        }
+
+        .dropdown-menu li {
+            margin-left: 0;
+            padding: 10px;
+            transition: all 0.5s;
+        }
+
+        .dropdown-menu li:last-child {
+            margin-bottom: 0;
+        }
+
+        .nav-menu-has-children::after {
+            content: '';
+            border-style: solid;
+            border-width: 6px 3px 0 3px;
+            border-color: #292929 transparent transparent transparent;
+            width: 0;
+            height: 0;
+            margin: auto 0;
+            position: absolute;
+            top: 0;
+            right: -15px;
+            bottom: 0;
+            z-index: 66;
+            transition: 0.45s cubic-bezier(0.78, 0, 0.17, 1.005);
+        }
+
+
+        /*end drop-down menu*/
+
+        /*button callback*/
+        .phone-icon {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -22px;
+        }
+
+        .button-popap {
+            width: 300px;
+            position: relative;
+            background: none;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 15px 0 15px 50px;
+            color: #000000;
+            box-sizing: border-box;
+            text-align: center;
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+        .small .button-popap {
+            transform: scale(.8);
+        }
+
+        /*end button callback*/
+
+        .bottom-line {
+            width: 100%;
+            height: 1px;
+            background-color: #49B3FB;
+            position: absolute;
+            bottom: 0;
+        }
+
+        /*end nav menu*/
+
+        /*------------------------------------------------------------------------------------------------------*/
+
+        /*gamburger menu*/
+
+        .c-hamburger {
+            display: none;
+            position: absolute;
+            right: 15px;
+            top: 0;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            width: 60px;
+            height: 60px;
+            font-size: 0;
+            text-indent: -9999px;
+            appearance: none;
+            box-shadow: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, 1s;
+            z-index: 5;
+        }
+
+        .c-hamburger:focus {
+            outline: none;
+        }
+
+        .c-hamburger span {
+            display: block;
+            position: absolute;
+            top: 30px;
+            left: 18px;
+            right: 18px;
+            height: 4px;
+            background: #3298F2;
+        }
+
+        .c-hamburger span::before, .c-hamburger span::after {
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #3298F2;
+            content: "";
+        }
+
+        .c-hamburger span::before {
+            top: -10px;
+        }
+
+        .c-hamburger span::after {
+            bottom: -10px;
+        }
+
+        .c-hamburger-line {
+            /*background-color: #ffffff;*/
+        }
+
+        .c-hamburger-line span {
+            transition: background 0s 0.3s;
+        }
+
+        .c-hamburger-line span::before, .c-hamburger-line span::after {
+            transition-duration: 0.3s, 0.3s;
+            transition-delay: 0.3s, 0s;
+        }
+
+        .c-hamburger-line span::before {
+            transition-property: top, transform;
+        }
+
+        .c-hamburger-line span::after {
+            transition-property: bottom, transform;
+        }
+
+        /* состояние active при открытом меню  */
+        .c-hamburger-line.is-active span {
+            background: none;
+        }
+
+        .c-hamburger-line.is-active span::before {
+            top: 0;
+            transform: rotate(45deg);
+            background-color: #3298F2;
+        }
+
+        .c-hamburger-line.is-active span::after {
+            bottom: 0;
+            transform: rotate(-45deg);
+            background-color: #3298F2;
+        }
+
+        .c-hamburger-line.is-active span::before, .c-hamburger-line.is-active span::after {
+            transition-delay: 0s, 0.3s;
+        }
+
+        /*end gamburger menu*/
+
+        /*------------------------------------------------------------------------------------------------------*/
+
+        @media only screen and (min-width: 992px) {
+            .nav_item:hover, .nav_item a:hover {
+                color: #FF9638;
+            }
+
+            .dropdown-menu li:hover {
+                background: #ffffff;
+            }
+
+            .dropdown-menu li:hover a {
+                color: #3298F2;
+            }
+
+
+            .nav_item:hover .dropdown-menu {
+                display: block;
+            }
+
+            .nav-menu-has-children:hover:after {
+                transform: rotateX(180deg);
+            }
+        }
+
+        @media only screen and (max-width: 992px) {
+            .c-hamburger {
+                display: block;
+            }
+
+            .small .nav-menu {
+                top: 39px;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                background-color: #3298F2;
+                left: 100%;
+                width: 100%;
+                min-height: 97vh;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 50px;
+                row-gap: 20px;
+                transition: all 1s;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav_item {
+                border-bottom: 1px solid rgba(119, 187, 247, 1);
+                box-sizing: border-box;
+                padding-bottom: 10px;
+                width: 95%;
+                flex-direction: column;
+            }
+
+            .nav_item a, .nav_item {
+                height: auto;
+                color: #fff;
+                font-weight: 900;
+                font-size: 24px;
+            }
+
+            .button-popap {
+                display: none;
+            }
+
+            ul.dropdown-menu {
+                position: initial;
+                background: none;
+                border: none;
+                width: 100%;
+                text-align: center;
+                display: block;
+                height: 0;
+                overflow: hidden;
+                transition: 1s;
+                background: #ffffff;
+                padding: 0;
+            }
+
+            .is-active .dropdown-menu {
+                height: 335px;
+            }
+
+            .dropdown-menu a {
+                font-size: 1rem;
+                color: #000000;
+                font-weight: 600;
+            }
+
+            .nav-menu-has-children::after {
+                border-width: 9px 6px 0 6px;
+                top: 10px;
+                right: 0;
+                bottom: auto;
+            }
+
+            .is-active.nav-menu-has-children::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        @media only screen and (max-width: 360px) {
+            .nav-menu {
+                overflow-y: auto;
+            }
+        }
+
+        /*end menu*/
+    </style>
+
+
+    <script>
+
+        let buttonMenu = document.querySelector('.c-hamburger');
+
+        buttonMenu.onclick = () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        };
+
+        // end menu
+
+        // c-hamburger
+        document.querySelector('.c-hamburger').addEventListener('click', function (e) {
+            e.preventDefault();
+            this.classList.toggle('is-active');
+        });
+        // end c-hamburger
+
+
+        // =========================================================================================================================
+        // dropDown.style.height = dropDown.scrollHeight + 'px';
+        const mobileCourse = () => {
+            document.querySelector('.nav-menu-has-children').onclick = function () {
+                this.classList.toggle('is-active');
+            }
+        }
+
+        if (document.body.clientWidth < 992) {
+            mobileCourse();
+        }
+
+        const headers = document.querySelector('.header');
+
+        window.addEventListener('scroll', function () {
+            if (pageYOffset > 1) {
+                headers.classList.add('small');
+            } else {
+                headers.classList.remove('small');
+            }
+        });
+    </script>
+
+<style>
+    #top_screen {
+        display: grid;
+        padding-left: 100px;
+        grid-template-columns: 1fr .75fr;
+        grid-template-rows: 100vh;
+        min-height: 700px;
+        position: relative;
+        background: #EDF4FB;
+    }
+
+    .top_screen__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .top_screen__left h1 {
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #FF9638;
+    }
+
+    .top_screen__left h2 {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 26px;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .top_screen__right {
+        padding-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: #3298F2;
+        grid-row-gap: 100px;
+        padding-right: 100px;
+        position: relative;
+    }
+
+    .top_screen__right img {
+        position: absolute;
+        bottom: 0;
+        left: -23.5%;
+    }
+
+    .top_screen__item {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top_screen__number {
+        border-color: #FFC188;
+        color: #3298f2;
+        background-color: #F7F7F7;
+    }
+
+    .top_screen__item p {
+        font-weight: 800;
+        font-size: 17px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: #F4F4F4;
+        letter-spacing: 1px;
+    }
+
+    .top_screen__slogan {
+        position: relative;
+        line-height: 26px;
+        color: #000000;
+        border: 3px dashed #8A8A8A;
+        border-radius: 12px;
+        padding: 50px 20px;
+        width: 75%;
+        margin-top: 50px;
+    }
+
+    .top_screen__title {
+        color: #333333;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .top_screen__hours {
+        font-weight: 900;
+        font-size: 100px;
+        color: #3298f2;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    .top_screen__hours span {
+        font-size: .45em;
+    }
+
+    .top_screen__bg {
+        text-transform: uppercase;
+        font-size: 200px;
+        color: #ffffff;
+        font-weight: 900;
+        position: absolute;
+        right: -40px;
+        top: 85px;
+    }
+
+    @media screen and (max-width: 1600px) {
+        .top_screen__item p {
+            font-size: 14px;
+        }
+
+        .top_screen__left h1::before {
+            font-size: 110px;
+        }
+
+        .top_screen__right img {
+            width: 400px;
+        }
+
+        .top_screen__bg {
+            font-size: 150px;
+        }
+    }
+
+    @media screen and (max-width: 1370px) {
+        .top_screen__right img {
+            width: 340px;
+            left: -25%;
+        }
+
+        .top_screen__bg {
+            font-size: 120px;
+        }
+
+        .top_screen__hours {
+            font-size: 85px;
+        }
+
+        .top_screen__left h1 {
+            font-size: 30px;
+        }
+
+        .top_screen__left h2 {
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .top_screen__right {
+            padding-right: 40px;
+        }
+
+        .top_screen__left h1::before {
+            font-size: 90px;
+        }
+
+        #top_screen {
+            padding-left: 25px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 1024px) {
+        #top_screen {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            padding: 0 30px;
+        }
+
+        .top_screen__left {
+            justify-content: flex-end;
+        }
+
+        .top_screen__left button {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            margin-left: -171px;
+        }
+
+        .top_screen__right {
+            align-items: center;
+            background: none;
+            flex-direction: row;
+            padding-right: 0;
+            padding-top: 0;
+        }
+
+        .top_screen__right img {
+            display: none;
+        }
+
+        .top_screen__number {
+            background-color: #72CC37;
+            border-color: #E6EDF3;
+            color: #ffffff;
+        }
+
+        .top_screen__item p {
+            color: #000000;
+        }
+
+        .top_screen__slogan {
+            padding: 15px;
+            width: 100%;
+        }
+
+        .top_screen__left h2 {
+            line-height: 40px;
+        }
+
+        .top_screen__left h1 {
+            margin-left: 5px;
+        }
+
+        .top_screen__bg {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        #top_screen {
+            background-color: #72CC37;
+            padding-top: 70px;
+            height: auto;
+            grid-template-rows: auto;
+        }
+
+        .top_screen__left {
+            justify-content: center;
+        }
+
+        .top_screen__left h1 span {
+            color: #000000;
+            font-size: 22px;
+        }
+
+        .top_screen__left h1::before {
+            content: none;
+        }
+
+        .top_screen__left h1 {
+            font-size: 24px;
+            line-height: 30px;
+            color: #ffffff;
+        }
+
+        .top_screen__left h2 {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        .top_screen__right {
+            flex-direction: column;
+            grid-row-gap: 15px;
+            padding-top: 25px;
+            justify-content: flex-start;
+        }
+
+        .top_screen__item {
+            width: 100%;
+            flex-direction: row;
+            column-gap: 12px;
+        }
+
+        .top_screen__number {
+            background-color: #ffffff;
+            border-color: #AAE087;
+            color: #3298f2;
+        }
+
+        .top_screen__hours {
+            font-size: 50px;
+        }
+    }
+</style>
+
+<main class="main" id="java">
+
+
+    
+    <section id="reviews">
+<!--        todo заголовки h2 h3-->
+        <h3 class="h3_heading  center">Досягли успіху вже більше</h3>
+        <h2 class="h2_heading orange center">1000 випускників</h2>
+
+        <div class="wrapper reviews_grid">
+            <div class="reviews_videos slide_dots">
+                <div class="splide__track">
+                    <div class="splide__list reviews_videos__grid">
+                        <div class="review_item splide__slide">
+                            
+    <div class="play_button__content">
+        <div class="play_button__wrap flex-center" data-id="SUUKIvxkOIE">
+            <div class="layer_button flex-center">
+                <div class="play_button flex-center"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+                            <picture class=" lazyloaded">
+                                <source data-srcset="image/youtube_images/webp/anna.webp" type="image/webp" srcset="index_files/anna.webp 1x">
+                                <img class=" ls-is-cached lazyloaded" data-src="image/youtube_images/anna.jpg" alt="Анна курс  java complex відгук Okten" src="index_files/anna.jpg">
+                            </picture>
+                        </div>
+
+                        <div class="review_item splide__slide">
+                            
+    <div class="play_button__content">
+        <div class="play_button__wrap flex-center" data-id="ubfy1xgc0ss">
+            <div class="layer_button flex-center">
+                <div class="play_button flex-center"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+                            <picture class=" lazyloaded">
+                                <source data-srcset="image/youtube_images/webp/vlad.webp" type="image/webp" srcset="index_files/vlad.webp 1x">
+                                <img class=" ls-is-cached lazyloaded" data-src="image/youtube_images/vlad.jpg" alt="Влад курс  java complex відгук Okten" src="index_files/vlad.jpg">
+                            </picture>
+                        </div>
+
+                        <div class="review_item splide__slide">
+                            
+    <div class="play_button__content">
+        <div class="play_button__wrap flex-center" data-id="wDJnf0afsAc">
+            <div class="layer_button flex-center">
+                <div class="play_button flex-center"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+                            <picture class=" lazyloaded">
+                                <source data-srcset="image/youtube_images/webp/kyrylo.webp" type="image/webp" srcset="index_files/kyrylo.webp 1x">
+                                <img class=" ls-is-cached lazyloaded" data-src="image/youtube_images/kyrylo.jpg" alt="Кирило курс  python complex відгук Okten" src="index_files/kyrylo.jpg">
+                            </picture>
+                        </div>
+
+                        <div class="review_item splide__slide">
+                            
+    <div class="play_button__content">
+        <div class="play_button__wrap flex-center" data-id="NC7QTTROT3I">
+            <div class="layer_button flex-center">
+                <div class="play_button flex-center"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+                            <picture class=" lazyloaded">
+                                <source data-srcset="image/youtube_images/webp/ivan.webp" type="image/webp" srcset="index_files/ivan.webp 1x">
+                                <img class=" ls-is-cached lazyloaded" data-src="image/youtube_images/ivan.jpg" alt="Іван курс  java complex відгук Okten" src="index_files/ivan.jpg">
+                            </picture>
+
+                        </div>
+
+                        <div class="review_item splide__slide">
+                            
+    <div class="play_button__content">
+        <div class="play_button__wrap flex-center" data-id="WbBeGssIjHM">
+            <div class="layer_button flex-center">
+                <div class="play_button flex-center"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+                            <picture class=" lazyloaded">
+                                <source data-srcset="image/youtube_images/webp/orysya.webp" type="image/webp" srcset="index_files/orysya.webp 1x">
+                                <img class=" ls-is-cached lazyloaded" data-src="image/youtube_images/orysya.jpg" alt="Орися курс qa/qs testing complex відгук Okten" src="index_files/orysya.jpg">
+                            </picture>
+                        </div>
+
+                        <div class="review_item splide__slide">
+                            
+    <div class="play_button__content">
+        <div class="play_button__wrap flex-center" data-id="h5uZmLLx1RY">
+            <div class="layer_button flex-center">
+                <div class="play_button flex-center"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+                            <picture class=" lazyloaded">
+                                <source data-srcset="image/youtube_images/webp/yura.webp" type="image/webp" srcset="index_files/yura.webp 1x">
+                                <img class=" ls-is-cached lazyloaded" data-src="image/youtube_images/yura.jpg" alt="Юра курс js complex відгук Okten" src="index_files/yura.jpg">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews_decription black">
+                <div class="reviews_description__title">Історії успіху</div>
+                <div class="reviews_description__text">
+                    Школа програмування OKTEN - єдина в Україні, хто має відео відгуки працевлаштованних студентів в
+                    такій кількості.І це тільки початок, адже наші випускники та їх досягнення говорять самі за себе.
+                </div>
+
+                <a href="https://owu.com.ua/vidguky.php" class=" flare">Всі 400+ відео відгуків</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <style>
+
+        #story {
+            padding: 215px 0 100px;
+            position: relative;
+        }
+
+        .story_grid {
+            display: grid;
+            grid-template-columns: 40% 40%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .story_paragraph {
+            margin-top: 40px;
+            font-weight: 500;
+            line-height: 26px;
+            text-align: justify;
+        }
+
+        .story_video img {
+            border-radius: 20px;
+        }
+
+        #story .play_button__content {
+            right: 50px;
+            top: 15px;
+        }
+
+        .story_text__bg {
+            font-size: 150px;
+            font-weight: 900;
+            text-transform: uppercase;
+            position: absolute;
+        }
+
+        .story_text__first {
+            color: #FFFFFF;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #F7F7F7;
+            top: 0;
+            right: 0;
+        }
+
+        .story_text__second {
+            color: #F7F7F7;
+            bottom: 0;
+        }
+
+        @media screen and (max-width: 1360px) {
+            .story_text__bg {
+                font-size: 100px;
+            }
+
+            .story_text__first {
+                top: 30px;
+                right: 95px;
+            }
+
+            #story {
+                padding: 105px 0 100px;
+            }
+
+            #test #story {
+                padding: 200px 0 100px;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            .story_text__first {
+                top: 0;
+                right: 0;
+            }
+
+            .story_grid {
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 50px;
+            }
+
+            #story .play_button__content {
+                right: 50px;
+                top: initial;
+                bottom: 15px;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            .story_video {
+                position: relative;
+            }
+
+            #story .play_button__content {
+                right: 10px;
+            }
+
+            .story_grid {
+                grid-template-columns: 50% 45%;
+            }
+
+            #test #story {
+                padding: 30px 0;
+            }
+
+            .story_text__bg {
+                display: none;
+            }
+
+            .story_grid {
+                grid-template-columns: 1fr;
+                grid-row-gap: 30px;
+            }
+
+            .story_content h2, .story_content h3 {
+                text-align: center;
+            }
+
+            .story_paragraph, .story_video {
+                padding: 0 15px;
+            }
+
+            #story .play_button__content {
+                bottom: 25px;
+                top: initial;
+                right: 25px;
+            }
+
+
+        }
+        @media screen and (max-width: 480px) {
+            #story {
+                padding: 30px 0;
+            }
+
+            .story_grid {
+                grid-template-columns: 1fr;
+                grid-row-gap: 20px;
+            }
+
+            .story_paragraph {
+                margin-top: 20px;
+            }
+
+
+        }
+    </style>
+
+
+
+
+    <section id="warranty">
+        <div class="js_complex__text">best in ukraine</div>
+
+        <div class="h3_heading center orange">Курси програмування</div>
+        <div class="h2_heading center ">java з гарантією</div>
+
+        <div class="wrapper warranty_grid">
+            <div class="warranty_image">
+                <picture>
+                    <source data-srcset="image/logo/webp/Girl-java.webp" type="image/webp" srcset="index_files/Girl-java.webp 1x">
+                    <img class=" lazyloaded" data-src="image/logo/Girl-java.png" alt="okten" src="index_files/Girl-java.png">
+                </picture>
+            </div>
+
+            <div class="warranty_list">
+                <ul>
+                    <li>
+                        <div class="warranty_list__title">Стажування в ІТ-компанії</div>
+                        <p class="warranty_list__text">Покажи себе на курсі і ще до закінчення навчання ми
+                                                       відправимо
+                                                       тебе на стажування в ІТ-компанію.</p>
+                    </li>
+
+                    <li>
+                        <div class="warranty_list__title">Три випускних проекти</div>
+                        <p class="warranty_list__text">Наприкінці курсу ти будеш мати три проекти, з якими легко
+                                                       працевлаштуєшся.</p>
+                    </li>
+
+                    <li>
+                        <div class="warranty_list__title">Інтенсивність</div>
+                        <p class="warranty_list__text">На відміну від інших наші студенти вчаться 6 разів на тижден
+                                                       впродовж всього терміну. Саме тому вони краше за випускників всіх
+                                                       інших шкіл та легко
+                                                       працевлаштовуються.</p>
+                    </li>
+
+                    <li>
+                        <div class="warranty_list__title">Англійська мова</div>
+                        <p class="warranty_list__text">В програмі курсу вже є англійська мова всіх необхідних
+                                                       рівнів,
+                                                       отже тобі не потрібно записуватись на додаткові курси. І це живі
+                                                       заняття!</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!--        projects проэкти -->
+        <style>
+        /*PROJECT*/
+        #project {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        #project .project-wrap-mobile {
+            display: none;
+        }
+
+        #project .splide__list {
+            width: auto;
+        }
+
+        .project-wrap {
+            display: grid;
+            grid-template-columns: repeat(4,  1fr);
+            grid-column-gap: 15px;
+            grid-row-gap: 15px;
+        }
+
+        .project-item {
+
+        }
+
+        .project-image {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            transition: ease-in-out .5s;
+            overflow: hidden;
+        }
+
+        .project-image::before, .project-image::after {
+            display: flex;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(50, 152, 242, .85);
+            transition: ease-in-out .5s;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .project-image::before {
+            content: 'Дивитись';
+            top: -100%;
+            align-items: flex-end;
+        }
+
+        .project-image::after {
+            content: 'детальніше';
+            bottom: -100%;
+            text-align: center;
+        }
+
+        .project-image:hover::before {
+            top: -50%;
+        }
+
+        .project-image:hover::after {
+            bottom: -50%;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project-course span {
+            color: #3298f2;
+        }
+
+        .project_slider {
+            margin-top: 50px;
+        }
+
+        @media screen and (max-width: 992px) {
+            .project-wrap {
+                display: flex;
+            }
+
+            #project .splide__pagination {
+                bottom: -45px;
+            }
+
+            #project{
+                padding-bottom: 60px;
+            }
+            .project .sub_title {
+                width: 90%;
+            }
+
+            .project .splide__pagination__page {
+                column-gap: 15px;
+                background-color: #46ABE3;
+                opacity: .25;
+            }
+
+            .project .splide__pagination__page.is-active {
+                opacity: 1;
+                background-color: #46ABE3;
+                border: 2px solid #000000;
+            }
+        }
+
+    </style>
+
+
+
+
+    
+    <style>
+        #video {
+            position: relative;
+        }
+
+        .video_big_title {
+            font-size: 150px;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: center;
+            position: absolute;
+            top: -25px;
+            color: #fff;
+            opacity: .1;
+            width: 100%;
+            z-index: 5;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .video.background-blue {
+            background-color: #47A2E8;
+            height: 50%;
+        }
+
+        .video.background-white {
+            background-color: #fff;
+            height: 50%;
+        }
+
+        .video-content {
+            padding-top: 123px;
+            position: relative;
+            z-index: 1000;
+            padding-bottom: 75px;
+        }
+
+        .video.title {
+            text-align: center;
+            margin-bottom: 90px;
+        }
+
+        .video.video-outer {
+            border-radius: 8px;
+            max-width: 1080px;
+            height: 515px;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-image {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .video-image img {
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-image::before {
+            content: '';
+            background-color: rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+
+        .play-video-button-outer {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 66;
+
+        }
+
+        .play-video-button-icon-outer {
+            border: 1px solid #d6ecf6;
+            border-radius: 50%;
+            width: 112px;
+            height: 112px;
+            transition: .4s;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .play-video-button-icon-outer:hover .play-video-button-icon-circle-1::after {
+            background-color: #fff;
+        }
+
+        .play-video-button-icon-circle-1 {
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+            background-color: #FF7A00;
+            position: absolute;
+        }
+
+        .video-play-center {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .play-video-button-icon-circle-1::before {
+            content: '\f04b';
+            color: #ffffff;
+        }
+
+        .play-video-button-icon-circle-1::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            display: block;
+            width: 85px;
+            height: 85px;
+            background: #FF7A00;
+            border-radius: 50%;
+            animation: pulse-border 1500ms ease-out infinite;
+        }
+
+        @media screen and (max-width: 480px) {
+            .video-content {
+                padding-top: 1px;
+                padding-bottom: 30px;
+            }
+
+            .video.video-outer {
+                height: 210px;
+            }
+
+            .play-video-button-icon-outer {
+                width: 60px;
+                height: 60px;
+            }
+
+            .play-video-button-icon-circle-1::after {
+                width: 50px;
+                height: 50px;
+            }
+
+            .video.background-white {
+                background-color: #47A2E8;
+                height: 50%;
+            }
+
+            .video.title {
+                margin: 30px 0;
+            }
+
+            .video_big_title {
+                font-size: 50px;
+                top: -5px;
+            }
+        }
+
+
+    </style>
+
+
+
+
+
+        <style>
+        #mentors {
+            padding: 40px 0;
+            background: #EDF4FB;
+        }
+
+        .mentors_splide {
+            margin-top: 50px;
+        }
+
+        .mentors_item {
+            background: #ffffff;
+            color: #000000;
+            padding: 30px 28px;
+            border-radius: 20px;
+            -webkit-box-shadow: 10px -8px 5px 0 rgb(230 237 243 / 97%);
+            -moz-box-shadow: 10px -8px 5px 0 rgba(230, 237, 243, 0.97);
+            box-shadow: 10px -8px 5px 0 rgb(230 237 243 / 97%);
+        }
+
+        .mentors_name {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .mentors_name img {
+            height: 400px;
+            object-fit: cover;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .mentors_name span {
+            font-weight: normal;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .mentors_grid {
+            display: flex;
+        }
+
+        .mentors_description {
+            font-weight: 500;
+            font-size: 14px;
+            padding: 0 10px;
+            margin-top: 25px;
+            line-height: 20px;
+            text-align: justify;
+        }
+
+        #mentors .splide__arrow {
+            background-color: #3298f2;
+            opacity: .5;
+            transition: opacity .3s;
+        }
+
+        #mentors .splide__arrow:hover {
+            opacity: 1;
+        }
+
+        #mentors .splide__arrow--prev {
+            left: -1em;
+        }
+
+        #mentors .splide__arrow--next {
+            right: -1em;
+        }
+
+        @media screen and (max-width: 1360px) {
+            #mentors .splide__arrow--prev {
+                left: 15px;
+            }
+
+            #mentors .splide__arrow--next {
+                right: 15px;
+            }
+
+            .mentors_name img {
+                height: 450px;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .mentors_name img {
+                height: 430px;
+            }
+
+
+        }
+
+        @media screen and (max-width: 992px) {
+            .mentors_name img {
+                height: 430px;
+                margin: 0 auto;
+                width: 80%;
+            }
+
+            #mentors .splide__pagination {
+                bottom: -35px;
+                column-gap: 10px;
+            }
+
+            #mentors .splide__pagination__page {
+                width: 20px;
+                height: 20px;
+                background-color: #ff9638;
+                opacity: .25;
+                box-sizing: border-box;
+            }
+
+            #mentors .splide__pagination__page.is-active {
+                border: 2px solid #000000;
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            #mentors {
+                padding: 40px 0 45px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .mentors_name img {
+                width: 100%;
+            }
+        }
+    </style>
+    <div>
+    </div>
+
+
+    <section id="recording" class="bg_blue">
+        <div class="recording_bg__text">записатись</div>
+        <div class="wrapper">
+            <div class="recording_grid"><h3 class="h3_heading">Навчайся зараз, сплачуй потім</h3>
+                <h2 class="h2_heading white">Розтермінування до 24 місяців</h2>
+
+                <p class="recording_text white">Не має всієї необхідної суми? Не біда, адже Ви можете оформити
+                                                розтермінування
+                                                строком до 24 місяців.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="owu">
+        <h3 class="h3_heading center blue">Чому варто нам довіряти?</h3>
+        <div class="h2_heading center">Часті запитання</div>
+
+        <div class="wrapper owu_grid">
+            <div class="owu_grid__column">
+                <div class="owu_item">
+                    <div class="owu_item__title h3_heading before_01"><span>Гарантії працевлаштування?</span>
+                    </div>
+                    <div class="owu_item__text paragraph">Всі хто проходив наш унікальтний курс зі стажуванням
+                                                          влаштувались на роботу. І ми єдині в Україні, хто мають відео
+                                                          відгуки від роботодавців.
+                    </div>
+                </div>
+
+                <div class="owu_item">
+                    <div class="owu_item__title h3_heading before_02"><span>Що таке "повторка"?</span>
+                    </div>
+                    <div class="owu_item__text paragraph">Це можливість пройти курс повторно у разі якщо ви щось
+                                                          пропустили. Вона повністтю безкоштовна, та має необмежену
+                                                          кількість разів. Іншими словами з
+                                                          нами
+                                                          ви отримаєте знання не переплачуючі за них.
+                    </div>
+                </div>
+
+                <div class="owu_item">
+                    <div class="owu_item__title h3_heading before_03"><span>Що таке "Стажування" ?</span></div>
+                    <div class="owu_item__text paragraph">Стажування - це інкубатор досвіду на власному проекті
+                                                          впродовж
+                                                          5 місяців після закінчення навчання. Саме під час цього
+                                                          періоду ви отримаєте практичний
+                                                          досвід,
+                                                          який так необхідний для успішного проходження співбесіди.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="owu_grid__column owu_grid__image flex-center">
+                <picture>
+                    <source data-srcset="image/logo/webp/2happy_girls.webp" type="image/webp" srcset="index_files/2happy_girls.webp 1x">
+                    <img class=" lazyloaded" data-src="image/logo/2happy_girls.png" alt="Happy girls" src="index_files/2happy_girls.png">
+                </picture>
+            </div>
+
+            <div class="owu_grid__column">
+                <div class="owu_item">
+                    <div class="owu_item__title h3_heading before_04"><span>Рейтинг компанії?</span>
+                    </div>
+                    <div class="owu_item__text paragraph">Більше 300 відео відгуків від працевлаштованих, відео
+                                                          відгуки
+                                                          роботодавців, більше 600 відгуків в Google та Facebook з
+                                                          загальним рейтингом 4.9 зірок, та
+                                                          більше 800 працевлаштованих випускників
+                    </div>
+                </div>
+
+                <div class="owu_item">
+                    <div class="owu_item__title h3_heading before_05"><span>Рорзтермінування?</span></div>
+                    <div class="owu_item__text paragraph">Є можливість розтермінування платежів строком до 24
+                                                          місяців з
+                                                          закріпленням ціни. Це найкращі умови розтермінування в
+                                                          Україні. Всі деталі щодо
+                                                          розтермінування,
+                                                          ви можете дізнатись в нашого менеджера.
+                    </div>
+                </div>
+
+                <div class="owu_item">
+                    <div class="owu_item__title h3_heading before_06"><span>Скільки триває курс ?</span></div>
+                    <div class="owu_item__text paragraph">Базовий курс зі стажуванням триває - 909 годин, базовий
+                                                          курс -
+                                                          230 годин. Це найбільший курс на ринку України та СНД. Заняття
+                                                          6 разів на тиждень. Саме тому
+                                                          така висока продуктивність. Поки інші відпочивають ви
+                                                          навчаєтесь.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="forms">
+        
+    <style>
+
+        .form-item-sold-out {
+            position: absolute;
+            transform: rotate(45deg);
+            top: 40%;
+            left: 0;
+        }
+
+        #course_type_stationary, #course_type_online {
+            position: relative;
+            /*padding-top: 100px;*/
+            padding-top: 30px;
+            background-color: #3298f2;
+            height: 1045px;
+        }
+
+        #course_type_stationary h2, #course_type_online h2 {
+            margin-bottom: 40px;
+        }
+
+        .wrap-form-item {
+            display: flex;
+            right: 0;
+            color: #000000;
+            justify-content: space-around;
+        }
+
+        .wrap-form-item.splide__list {
+            width: 100%;
+        }
+
+        .form-online-content .splide__track {
+            width: 100%;
+        }
+
+        .form-item {
+            max-width: 415px;
+            width: 23%;
+            padding: 20px 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #course_type_online .form-item {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        #course_type_online .form-input form input {
+            background-color: transparent;
+            border-color: #8A8A8A;
+        }
+
+        .form-item-title {
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            text-transform: uppercase;
+
+        }
+
+        .form-wrap-description {
+            margin-top: 35px;
+            line-height: 20px;
+            /*height: 145px;*/
+        }
+
+        .form-description-individual {
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+        .form-item-description {
+            position: relative;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            padding-left: 35px;
+            margin-top: 20px;
+        }
+
+        .form-item-description::before, .form-item-description-mob::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            display: block;
+            background: url(../image/svg/Light.svg) no-repeat;
+            background-size: contain;
+            left: 0;
+        }
+
+        #course_type_online .form-item-description::before, #course_type_online .form-item-description-mob::before {
+            background: url(../image/svg/Dark.svg) no-repeat;
+            background-size: contain;
+        }
+
+        .notrain::before {
+            background: url(../image/svg/lightWithout.svg) no-repeat;
+            background-size: contain;
+            width: 18px;
+            height: 18px;
+        }
+
+        #course_type_online .notrain::before {
+            background: url(../image/svg/DarkWithout.svg) no-repeat;
+            background-size: contain;
+            width: 18px;
+            height: 18px;
+        }
+
+        .form-price, .form-old-price {
+            margin-top: 30px;
+            font-weight: 800;
+            font-size: 28px;
+            line-height: 34px;
+            text-align: center;
+            color: #3298F2;
+        }
+
+        .form-old-price {
+            position: relative;
+        }
+
+        .form-old-price::before {
+            content: '';
+            position: absolute;
+            display: block;
+            background: url(../image/other/line.png) no-repeat center;
+            width: 200px;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            margin-left: -100px;
+        }
+
+        .form-input {
+            margin-top: 20px;
+        }
+
+        .form-input form div:first-child, .form-input-mob form div:first-child {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /*.form-input form input[name='phone'], .form-input-mob form input[name='phone'] {*/
+        /*    width: 65%;*/
+        /*}*/
+
+        /*.form-input form input[name='age'], .form-input-mob form input[name='age'] {*/
+        /*    width: 33%;*/
+        /*}*/
+
+        .form-input form input, .form-input-mob form input {
+            width: 100%;
+            margin-top: 12px;
+            padding: 10px;
+            border: 1px solid #EDF4FB;
+            box-sizing: border-box;
+            border-radius: 3px;
+            transition: .5s;
+        }
+
+        .form-input form input:hover, .form-input form input:focus {
+            border-color: #FFD43D;
+        }
+
+        #course_type_online .form-input form input:hover, #course_type_online .form-input form input:focus {
+            border-color: #72CC37;
+        }
+
+        #course_type_online .form-input form input, #course_type_online .form-input form input {
+            color: #ffffff;
+        }
+
+        .form-count, .form-count-mob {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: #3298F2;
+            margin-top: 30px;
+        }
+
+        .form-btn, .form-btn-mob {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .form-btn button, .form-btn-mob button {
+            background: #FFD43D;
+            border-radius: 6px;
+            width: 273px;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 15px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        #course_type_online .form-btn button {
+            background-color: #72CC37;
+            color: #ffffff;
+        }
+
+        #course_type_online, #course_type_online .arrows-form::after {
+            background-color: #303030;
+        }
+
+        #course_type_online .arrows-form {
+            background-color: #72CC37;
+        }
+
+        /*.wrap-form-item-online {*/
+        /*    display: flex;*/
+        /*    justify-content: space-around;*/
+        /*    width: 100%;*/
+        /*}*/
+
+        .form-online-content {
+            display: flex;
+
+        }
+
+        .form-content-online-bg {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-online-text-bg:first-child {
+            background-color: #212121;
+            font-weight: 900;
+            font-size: 144px;
+            line-height: 176px;
+            color: #303030;
+            text-align: right;
+        }
+
+        .form-online-text-bg:last-child {
+            font-weight: 900;
+            font-size: 96px;
+            line-height: 117px;
+            text-transform: uppercase;
+            color: #212121;
+        }
+
+        .kids #course_type_online {
+            display: none;
+        }
+
+        .reviews .video-review-item-photo .play-button-content {
+            top: inherit;
+            bottom: -25px;
+        }
+
+        .reviews .video-review-item-name {
+            margin-top: 40px;
+        }
+
+        .form-free input, .__select__title {
+            width: 100%;
+            margin-bottom: 10px;
+            border: 1px solid #292929;
+            box-sizing: border-box;
+            border-radius: 3px;
+            font-size: 16px;
+            padding: 10px 0 10px 10px;
+            font-weight: 600;
+            line-height: 17px;
+            letter-spacing: 0.05em;
+            color: #292929;
+        }
+
+        .form-free input:hover {
+            border-color: #3298f2;
+        }
+
+        .arrows-form {
+            font-weight: 900;
+            font-size: 20px;
+            width: 345px;
+            text-transform: uppercase;
+            color: #303030;
+            position: absolute;
+            height: 50px;
+            left: 0;
+            top: 20px;
+            /* margin-top: -37px; */
+            display: flex;
+            align-items: center;
+            clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+            padding-left: 25px;
+        }
+
+        .input_group_item {
+            display: grid;
+            grid-template-columns: 1fr .35fr;
+            grid-column-gap: 5px;
+        }
+
+        @media screen and (max-width: 1370px) {
+            #course_type_stationary, #course_type_online {
+                height: 1085px;
+            }
+
+            .form-btn button, .form-btn-mob button {
+                width: 100%;
+            }
+
+            .form-item {
+                padding: 20px;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+             .wrap-form-item {
+                padding: 0 10px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-column-gap: 10px;
+            }
+
+
+        }
+
+        @media screen and (max-width: 1024px) {
+            #course_type_stationary, #course_type_online {
+                padding-top: 80px;
+                height: 1150px;
+            }
+
+            #course_type_stationary .h2_heading.center, #course_type_online .h2_heading.center {
+                text-align: left;
+                margin-left: 25px;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            #course_type_stationary .h2_heading.center, #course_type_online .h2_heading.center {
+                margin-left: 0;
+            }
+
+            .wrap-form-item.splide__list {
+                width: max-content;
+                /*grid-template-columns: repeat(8, 1fr);*/
+                /*grid-column-gap: 0;*/
+                column-gap: 0;
+                display: flex;
+            }
+
+            #course_type_stationary, #course_type_online {
+                padding-left: 15px;
+                padding-right: 15px;
+                height: 1075px;
+            }
+
+            #forms .splide__slide {
+                /*width: 100% !important;*/
+            }
+
+            .form-item {
+                max-width: 800px;
+            }
+
+        }
+
+        @media screen and (max-width: 480px) {
+            #forms .splide__arrow {
+                top: 52%;
+                right: 1em;
+            }
+
+            .form-item {
+                width: 361px !important;
+            }
+
+            /*.wrap-form-item.splide__list {*/
+            /*    width: 100%;*/
+            /*}*/
+        }
+
+        @media screen and (max-width: 376px) {
+            .form-item {
+                width: 343px !important;
+            }
+
+        }
+
+        @media screen and (max-width: 360px) {
+            .arrows-form {
+                width: 305px;
+            }
+        }
+
+    </style>
+
+    <!--    <script src="js/forms.js"></script>-->
+    <script src="index_files/just-validate.js"></script>
+    <script src="index_files/inputmask.js"></script>
+    <script src="index_files/form-validate.js"></script>
+
+    <script>
+
+		function bindGtag(selector, priceSelector, titleSelector, courseFormat, device) {
+
+			let forms = document.querySelectorAll(selector);
+			console.log(forms);
+			for (const formItem of forms) {
+				const coursePrice = +formItem.querySelector(priceSelector).innerText.replace(' ', '').split(' ')[0];
+				const courseType = formItem.querySelector(titleSelector).innerText;
+
+				const course = 'JCX';
+				const event_label = course + '_' + courseFormat + '_' + courseType;
+
+				const form = formItem.querySelector('form');
+				if (form) {
+
+
+					form.addEventListener('submit', () => {
+						gtag('event', course + '_' + courseFormat, {
+							'event_category': 'submit',
+							'event_label': courseType,
+							'value': coursePrice
+						});
+
+					});
+
+				}
+			}
+		}
+
+		bindGtag('#course_type_stationary .wrap-form-item .form-item:not(.incubator)', '.form-price', '.form-item-title', 'static', 'desktop');
+		bindGtag('#course_type_online .wrap-form-item-online .form-item:not(.incubator)', '.form-price', '.form-item-title', 'online', 'desktop');
+
+    </script>
+
+
+    </div>
+
+
+</main>
+<!--footer-->
+    <style>
+        /*footer*/
+        footer {
+            padding: 55px 0 30px;
+            background: #292929;
+        }
+
+        .contact-item a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer-image {
+            text-align: center;
+        }
+
+        .footer-image img {
+            width: 100px;
+        }
+
+        .footer-content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-description {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            color: #F2F2F2;
+            margin-top: 25px;
+        }
+
+        .footer-contact {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            color: #F2F2F2;
+        }
+
+        .footer-contact i {
+            color: #3298F2;
+        }
+
+        .contact-item {
+            position: relative;
+            margin-bottom: 25px;
+            margin-left: 25px;
+        }
+
+        .contact-item span {
+            position: absolute;
+            left: -25px;
+        }
+
+        .contacts .contact-item i {
+            color: #3298f2;
+        }
+
+        @media screen and (max-width: 480px) {
+            .footer-logo {
+                display: none;
+            }
+        }
+
+        /*end footer*/
+    </style>
+
+    <!--lazyload script-->
+    <script src="index_files/lazysizes.js" async=""></script>
+    <!--    slider js-->
+    <script src="index_files/splide.js"></script>
+    <!--    <script src="js/splide.min.js"></script>-->
+    <!--slider css-->
+    <link rel="stylesheet" href="index_files/splide.css">
+
+    <!--google maps api-->
+    <script defer="defer" src="index_files/api.js"></script>
+
+
+    <!--jQuery script-->
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"-->
+    <!--            integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="-->
+    <!--            crossorigin="anonymous"></script>-->
+
+
+    <!--    font-awesome css-->
+    <link rel="stylesheet" href="index_files/all.css">
+
+    <link rel="stylesheet" href="index_files/css.css">
+
+    <script>
+
+        let url = new URL(window.location);
+        let searchParams = url.searchParams;
+        let srcMarker = searchParams.get('src');
+        if (srcMarker) {
+            let utmStorage = localStorage.getItem('utm') ? JSON.parse(localStorage.getItem('utm')) : []; // ['ads'] : []
+            if (!utmStorage.includes(srcMarker)) {
+                utmStorage.push(srcMarker);
+                localStorage.setItem('utm', JSON.stringify(utmStorage));
+            }
+        }
+
+
+        // function setUtmToHiddenInput() {
+        //     let utmStorage = JSON.parse(localStorage.getItem('utm'));
+        //     if (utmStorage) {
+        //         let forms = document.forms;
+        //         for (const form of forms) {
+        //             let utmInput = document.createElement('input');
+        //             utmInput.name = 'utm'
+        //             utmInput.type = 'hidden'
+        //             utmInput.value = utmStorage ? utmStorage.join('-') : '';
+        //             form.appendChild(utmInput)
+        //
+        //         }
+        //     }
+        // }
+
+
+        function setUtmToHiddenInput() {
+            let forms = document.forms;
+            for (const form of forms) {
+                let utmInput = document.createElement('input');
+                utmInput.name = 'utm'
+                utmInput.type = 'hidden'
+                let utmStorage = JSON.parse(localStorage.getItem('utm'));
+                if (utmStorage) {
+                        utmInput.value = utmStorage ? utmStorage.join('_') : '';
+                }
+                form.appendChild(utmInput)
+
+            }
+
+
+        }
+
+        setUtmToHiddenInput();
+
+    </script>
+
+
+<!--     end footer   -->
+<script src="index_files/splide_002.js"></script>
+<script src="index_files/main.js"></script>
+<script src="index_files/javascript.js"></script>
+
+
+    <style>
+        .video-overlay {
+            position: fixed; /* фиксированное положение */
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5); /* цвет фона */
+            z-index: 1050;
+            opacity: 0; /* по умолчанию модальное окно прозрачно */
+            -webkit-transition: opacity 200ms ease-in;
+            -moz-transition: opacity 200ms ease-in;
+            transition: opacity 200ms ease-in; /* анимация перехода */
+            pointer-events: none; /* элемент невидим для событий мыши */
+            margin: 0;
+            padding: 0;
+        }
+
+        .video-overlay.is-active {
+            opacity: 1; /* делаем окно видимым */
+            pointer-events: auto; /* элемент видим для событий мыши */
+            overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+        }
+
+        .close_video, .video-overlay-close {
+            position: absolute;
+            z-index: 9999;
+            top: 50px;
+            right: 50px;
+            line-height: 1;
+            color: #ffffff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 500ms;
+            font-size: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .close_video:hover, .video-overlay-close:hover {
+            color: #ff9638;
+        }
+
+        .video-overlay iframe {
+            width: 50%;
+            height: 50vh;
+        }
+
+        .video-overlay iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .video-overlay iframe {
+                width: 90%;
+            }
+
+        }
+
+    </style>
+
+    <div id="video-overlay" class="video-overlay">
+        <span class="close_video">×</span>
+    </div>
+
+    <script>
+		let videoOverlay = document.querySelector('#video-overlay');
+
+		function playMobile(play) {
+			play.forEach((el) => {
+				//         el.onclick = () => {
+				//             let id = el.children[0].dataset.id;
+				//             let videoReviewWrap = '';
+				//             videoOverlay.classList.add('is-active');
+				//             videoReviewWrap = `
+				//     <iframe width="500" height="360" src="https://youtube.com/embed/${id}"
+				//                             frameborder="0"
+				//                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				//                             allowfullscreen id="Youtube"></iframe>
+				// `;
+				//
+				//             videoOverlay.innerHTML += videoReviewWrap;
+				//
+				//         }
+				el.onclick = () => videoWindow(el, videoOverlay);
+			});
+		}
+
+		playMobile(document.querySelectorAll('.play_button__content'));
+		playMobile(document.querySelectorAll('.video-play-center'));
+		playMobile(document.querySelectorAll('.project-item'));
+
+		let stopVideos = function () {
+			let videos = document.querySelectorAll('.iframe-video, video');
+			Array.prototype.forEach.call(videos, function (video) {
+				if (video.tagName.toLowerCase() === 'video') {
+					video.pause();
+				} else {
+					let src = video.src;
+					video.src = src;
+				}
+			});
+		};
+
+		videoOverlay.onclick = function () {
+			this.classList.remove('is-active');
+			stopVideos();
+		};
+    </script>
+
+
+<!--to -> thank-page.php-->
+
+    <style>
+        .body-popap {
+            position: fixed;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: rgba(0, 0, 0, .8);
+            height: 100vh;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .body-popap.is-active {
+            opacity: 1;
+            z-index: 9999;
+        }
+
+        .window-modal {
+            width: 575px;
+            padding: 45px 0 65px;
+            background: #292929;
+            color: #FFFFFF;
+        }
+
+        .modal-contain {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .title-modal {
+            margin-bottom: 35px;
+            font-weight: 900;
+            font-size: 21px;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .window-modal .forms input {
+            width: 100%;
+        }
+
+        .forms input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #ffffff;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 60px;
+            color: #ffffff;
+        }
+
+        .forms input:hover {
+            border-bottom: 1px solid #FF9638;
+        }
+
+        .forms input:focus {
+            outline: none;
+        }
+
+        button.modal-btn {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 60px;
+            text-transform: uppercase;
+            color: #292929;
+            width: 100%;
+            background: #FFE200;
+            border: 2px solid #FFE200;
+            box-sizing: border-box;
+            border-radius: 6px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="body-popap flex-center" id="callback">
+
+        <div class="window-modal">
+            <span class="video-overlay-close">×</span>
+            <div class="container">
+                <div class="modal-contain">
+                    <h2 class="title-modal">
+                        перетелефонуйте мені
+                    </h2>
+                    <div class="forms">
+                        <form action="thank-page-consultation" method="post">
+                            <input required="" type="text" placeholder="Ім'я" name="name">
+                            <input type="text" placeholder="Прізвище" name="surname">
+                            <input id="inputCallBackPhone" required="" type="text" placeholder="0671231212" name="phone">
+                            <button class="modal-btn" type="submit">надіслати</button>
+                        <input name="utm" type="hidden"></form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+		setUtmToHiddenInput();
+		const inputCallBackPhone = document.querySelector('#inputCallBackPhone');
+        console.log(inputCallBackPhone);
+        let imCallback = new Inputmask('0(99)999-99-99');
+        imCallback.mask(inputCallBackPhone);
+		document.querySelectorAll('.call').forEach(el => {
+			el.onclick = () => document.querySelector('.body-popap').classList.toggle('is-active');
+		});
+		closeWindow('.video-overlay-close');
+
+    </script>
+
+
+
+
+</body></html>

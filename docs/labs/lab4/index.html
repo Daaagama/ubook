@@ -100,6 +100,43 @@
 
 
         <h3><a name="entity">Підстановка(entity)</a></h3>
+        <p>
+        В якості прикладу використання підстановки наведено скрипт який підставляє поточний час в текстове поле.
+        </p>
+
+        <p class="m-1">
+        <input type="text" id="time-field">
+        </p>
+        <script>
+          function setTime(){
+            date = new Date();
+            hours = date.getHours();
+            minutes = date.getMinutes();
+            seconds = date.getSeconds();
+            document.getElementById("time-field").value = "Поточний час - "+
+            hours + ":" + minutes + "." + seconds; 
+          }
+          setInterval(setTime, 1000);
+        </script>
+
+        <b class="m-1">HTML-код</b>
+          <code>
+            <pre class="m-2">
+&lt;input type=&quot;text&quot; id=&quot;time-field&quot;&gt;
+
+&lt;script&gt;
+  function setTime(){
+    date = new Date();
+    hours = date.getHours();
+    minutes = date.getMinutes();
+    seconds = date.getSeconds();
+    document.getElementById(&quot;time-field&quot;).value = &quot;Поточний час - &quot;+
+    hours + &quot;:&quot; + minutes + &quot;.&quot; + seconds; 
+  }
+  setInterval(setTime, 1000);
+&lt;/script&gt;
+            </pre>
+          </code>
 
         <h3><a name="script-tag">Вставка(тег script)</a></h3>
         

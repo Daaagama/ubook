@@ -1,0 +1,87 @@
+div {
+  box-sizing: border-box;
+}
+
+.top-element {
+  background-color: darkorange;
+	border: solid 1px;
+	height: 20vh;
+	padding-left: 5%;
+	max-height: 20vh;
+	display: block;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.middle-element {
+	height: 60vh;
+	display: block;
+}
+
+.down-element {
+	background-color: darkorange;
+	border: solid 1px;
+	height: 20vh;
+	display: block;
+  padding: 10px;
+  text-align: left;
+}
+
+.nested-top {
+	border: solid 1px;
+	height: 33%;
+	width: 25%;
+	background-color: white;
+	margin: 2hv 6vh 6vh 6vh;
+}
+
+.nested-left {
+	height: 100%;
+	width: 30%;
+	background-color: blue;
+	float: left;
+	border-left: solid 1px;
+	border-right: solid 1px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.nested-center {
+	width: 47%;
+  height: 100%;
+  border: solid 1px;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 6%;
+}
+
+.nested-right {
+	background-color: blue;
+  border: solid 1px;
+	width: 47%;
+	height: 100%;
+	float: right;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.nested-container {
+  height: 100%;
+  width: 70%;
+  float: right;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.nested-center-top {
+  height: 80%;
+
+}
+.nested-center-down {
+  height: 20%;
+  width: 100%;
+  background-color: red;
+  border-top: solid 1px;
+}

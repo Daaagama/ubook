@@ -1,0 +1,38 @@
+.lab2-list {
+  list-style-type: upper-roman;
+  list-style-position: inside;
+}
+
+.lab2-list li::marker {
+  color: red;
+}
+
+.lab2-text {
+  background-color: #a5d6a7;
+  margin-left: 1.5em;
+  padding: 1em 1em 1em 2em;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.lab2-text::first-letter {
+  margin-right: 0.15em;
+  margin-bottom: 0px;
+  font-family: "TeX Gyre Chorus";
+  font-size: 300%;
+}
+
+.lab2-floating {
+  margin: 1.5em 1em 0em 2em;
+  float: left;
+  height: 100px;
+  width: 120px;
+}
+
+.result {
+  background-color: #80DEEA;
+  margin-left: 1.5em;
+  padding: 1em;
+  border: 1px solid #333;
+  border-radius: 5px;
+}

@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <!-- favicon-->
+        <link rel="shortcut icon" href="https://owu.com.ua/image/faviconx.ico" type="image/x-icon">
+
+
+        <!--my styles-->
+        <link href="index_files/style.css" rel="stylesheet">
+        <!--my styles-->
+
+        <link rel="stylesheet" href="index_files/media.css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="index_files/js"></script>
+        <title>Курс Java програмування Львів та Онлайн.</title>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="topnav">
+      <a href="" class="navbar-item">
+        Форми навчання
+      </a>
+      <a href="" class="navbar-item">
+        Заходи
+      </a>
+      <a href="" class="navbar-item">
+        Про Академію
+      </a>
+      <a href="" class="navbar-item">
+        Контакти
+      </a>
+      <a class="navbar-dropdown">
+        <select class="dropdown-content">
+          <option href="">Київ</option>
+          <option href="">Харків</option>
+          <option href="">Одеса</option>
+        </select>
+              
+      </a>
+  </div>
+</nav>
+
+<style>
+    #top_screen {
+        display: grid;
+        padding-left: 100px;
+        grid-template-columns: 1fr .75fr;
+        grid-template-rows: 100vh;
+        min-height: 700px;
+        position: relative;
+        background: #EDF4FB;
+    }
+
+    .top_screen__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .top_screen__left h1 {
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #FF9638;
+    }
+
+    .top_screen__left h2 {
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 26px;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .top_screen__right {
+        padding-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: #3298F2;
+        grid-row-gap: 100px;
+        padding-right: 100px;
+        position: relative;
+    }
+
+    .top_screen__right img {
+        position: absolute;
+        bottom: 0;
+        left: -23.5%;
+    }
+
+    .top_screen__item {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top_screen__number {
+        border-color: #FFC188;
+        color: #3298f2;
+        background-color: #F7F7F7;
+    }
+
+    .top_screen__item p {
+        font-weight: 800;
+        font-size: 17px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: #F4F4F4;
+        letter-spacing: 1px;
+    }
+
+    .top_screen__slogan {
+        position: relative;
+        line-height: 26px;
+        color: #000000;
+        border: 3px dashed #8A8A8A;
+        border-radius: 12px;
+        padding: 50px 20px;
+        width: 75%;
+        margin-top: 50px;
+    }
+
+    .top_screen__title {
+        color: #333333;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .top_screen__hours {
+        font-weight: 900;
+        font-size: 100px;
+        color: #3298f2;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    .top_screen__hours span {
+        font-size: .45em;
+    }
+
+    .top_screen__bg {
+        text-transform: uppercase;
+        font-size: 200px;
+        color: #ffffff;
+        font-weight: 900;
+        position: absolute;
+        right: -40px;
+        top: 85px;
+    }
+
+    @media screen and (max-width: 1600px) {
+        .top_screen__item p {
+            font-size: 14px;
+        }
+
+        .top_screen__left h1::before {
+            font-size: 110px;
+        }
+
+        .top_screen__right img {
+            width: 400px;
+        }
+
+        .top_screen__bg {
+            font-size: 150px;
+        }
+    }
+
+    @media screen and (max-width: 1370px) {
+        .top_screen__right img {
+            width: 340px;
+            left: -25%;
+        }
+
+        .top_screen__bg {
+            font-size: 120px;
+        }
+
+        .top_screen__hours {
+            font-size: 85px;
+        }
+
+        .top_screen__left h1 {
+            font-size: 30px;
+        }
+
+        .top_screen__left h2 {
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .top_screen__right {
+            padding-right: 40px;
+        }
+
+        .top_screen__left h1::before {
+            font-size: 90px;
+        }
+
+        #top_screen {
+            padding-left: 25px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 1024px) {
+        #top_screen {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            padding: 0 30px;
+        }
+
+        .top_screen__left {
+            justify-content: flex-end;
+        }
+
+        .top_screen__left button {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            margin-left: -171px;
+        }
+
+        .top_screen__right {
+            align-items: center;
+            background: none;
+            flex-direction: row;
+            padding-right: 0;
+            padding-top: 0;
+        }
+
+        .top_screen__right img {
+            display: none;
+        }
+
+        .top_screen__number {
+            background-color: #72CC37;
+            border-color: #E6EDF3;
+            color: #ffffff;
+        }
+
+        .top_screen__item p {
+            color: #000000;
+        }
+
+        .top_screen__slogan {
+            padding: 15px;
+            width: 100%;
+        }
+
+        .top_screen__left h2 {
+            line-height: 40px;
+        }
+
+        .top_screen__left h1 {
+            margin-left: 5px;
+        }
+
+        .top_screen__bg {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        #top_screen {
+            background-color: #72CC37;
+            padding-top: 70px;
+            height: auto;
+            grid-template-rows: auto;
+        }
+
+        .top_screen__left {
+            justify-content: center;
+        }
+
+        .top_screen__left h1 span {
+            color: #000000;
+            font-size: 22px;
+        }
+
+        .top_screen__left h1::before {
+            content: none;
+        }
+
+        .top_screen__left h1 {
+            font-size: 24px;
+            line-height: 30px;
+            color: #ffffff;
+        }
+
+        .top_screen__left h2 {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        .top_screen__right {
+            flex-direction: column;
+            grid-row-gap: 15px;
+            padding-top: 25px;
+            justify-content: flex-start;
+        }
+
+        .top_screen__item {
+            width: 100%;
+            flex-direction: row;
+            column-gap: 12px;
+        }
+
+        .top_screen__number {
+            background-color: #ffffff;
+            border-color: #AAE087;
+            color: #3298f2;
+        }
+
+        .top_screen__hours {
+            font-size: 50px;
+        }
+    }
+</style>
+
+<main class="main" id="java">
+
+
+    
+    <section id="reviews">
+<!--        todo заголовки h2 h3-->
+        <h3 class="h3_heading  center">Досягли успіху вже більше</h3>
+        <h2 class="h2_heading orange center">800 випускників</h2>
+
+        <div class="wrapper reviews_grid">
+            <div class="reviews_videos slide_dots">
+                <div class="splide__track">
+                    <div class="splide__list reviews_videos__grid">
+                        <div class="review_item splide__slide">
+                            
+    <div class="play_button__content">
+        <div class="play_button__wrap flex-center" data-id="SUUKIvxkOIE">
+            <div class="layer_button flex-center">
+                <div class="play_button flex-center"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+                            <picture class=" lazyloaded">
+                                <source data-srcset="image/youtube_images/webp/anna.webp" type="image/webp" srcset="index_files/anna.webp 1x">
+                                <img class=" ls-is-cached lazyloaded" data-src="image/youtube_images/anna.jpg" alt="Анна курс  java complex відгук Okten" src="index_files/anna.jpg">
+                            </picture>
+                        </div>
+
+                        <div class="review_item splide__slide">
+                            
+    <div class="play_button__content">
+        <div class="play_button__wrap flex-center" data-id="ubfy1xgc0ss">
+            <div class="layer_button flex-center">
+                <div class="play_button flex-center"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+                            <picture class=" lazyloaded">
+                                <source data-srcset="image/youtube_images/webp/vlad.webp" type="image/webp" srcset="index_files/vlad.webp 1x">
+                                <img class=" ls-is-cached lazyloaded" data-src="image/youtube_images/vlad.jpg" alt="Влад курс  java complex відгук Okten" src="index_files/vlad.jpg">
+                            </picture>
+                        </div>
+
+                        <div class="review_item splide__slide">
+                            
+    <div class="play_button__content">
+        <div class="play_button__wrap flex-center" data-id="wDJnf0afsAc">
+            <div class="layer_button flex-center">
+                <div class="play_button flex-center"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+                            <picture class=" lazyloaded">
+                                <source data-srcset="image/youtube_images/webp/kyrylo.webp" type="image/webp" srcset="index_files/kyrylo.webp 1x">
+                                <img class=" ls-is-cached lazyloaded" data-src="image/youtube_images/kyrylo.jpg" alt="Кирило курс  python complex відгук Okten" src="index_files/kyrylo.jpg">
+                            </picture>
+                        </div>
+
+                        <div class="review_item splide__slide">
+                            
+    <div class="play_button__content">
+        <div class="play_button__wrap flex-center" data-id="NC7QTTROT3I">
+            <div class="layer_button flex-center">
+                <div class="play_button flex-center"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+                            <picture class=" lazyloaded">
+                                <source data-srcset="image/youtube_images/webp/ivan.webp" type="image/webp" srcset="index_files/ivan.webp 1x">
+                                <img class=" ls-is-cached lazyloaded" data-src="image/youtube_images/ivan.jpg" alt="Іван курс  java complex відгук Okten" src="index_files/ivan.jpg">
+                            </picture>
+
+                        </div>
+
+                        <div class="review_item splide__slide">
+                            
+    <div class="play_button__content">
+        <div class="play_button__wrap flex-center" data-id="WbBeGssIjHM">
+            <div class="layer_button flex-center">
+                <div class="play_button flex-center"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+                            <picture class=" lazyloaded">
+                                <source data-srcset="image/youtube_images/webp/orysya.webp" type="image/webp" srcset="index_files/orysya.webp 1x">
+                                <img class=" ls-is-cached lazyloaded" data-src="image/youtube_images/orysya.jpg" alt="Орися курс qa/qs testing complex відгук Okten" src="index_files/orysya.jpg">
+                            </picture>
+                        </div>
+
+                        <div class="review_item splide__slide">
+                            
+    <div class="play_button__content">
+        <div class="play_button__wrap flex-center" data-id="h5uZmLLx1RY">
+            <div class="layer_button flex-center">
+                <div class="play_button flex-center"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+                            <picture class=" lazyloaded">
+                                <source data-srcset="image/youtube_images/webp/yura.webp" type="image/webp" srcset="index_files/yura.webp 1x">
+                                <img class=" ls-is-cached lazyloaded" data-src="image/youtube_images/yura.jpg" alt="Юра курс js complex відгук Okten" src="index_files/yura.jpg">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews_decription black">
+                <div class="reviews_description__title">Історії успіху</div>
+                <div class="reviews_description__text">
+                    Школа програмування OKTEN - єдина в Україні, хто має відео відгуки працевлаштованних студентів в
+                    такій кількості.І це тільки початок, адже наші випускники та їх досягнення говорять самі за себе.
+                </div>
+
+                <a href="https://owu.com.ua/vidguky.php" class=" flare">Всі 400+ відео відгуків</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <style>
+
+        #story {
+            padding: 215px 0 100px;
+            position: relative;
+        }
+
+        .story_grid {
+            display: grid;
+            grid-template-columns: 40% 40%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .story_paragraph {
+            margin-top: 40px;
+            font-weight: 500;
+            line-height: 26px;
+            text-align: justify;
+        }
+
+        .story_video img {
+            border-radius: 20px;
+        }
+
+        #story .play_button__content {
+            right: 50px;
+            top: 15px;
+        }
+
+        .story_text__bg {
+            font-size: 150px;
+            font-weight: 900;
+            text-transform: uppercase;
+            position: absolute;
+        }
+
+        .story_text__first {
+            color: #FFFFFF;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #F7F7F7;
+            top: 0;
+            right: 0;
+        }
+
+        .story_text__second {
+            color: #F7F7F7;
+            bottom: 0;
+        }
+
+        @media screen and (max-width: 1360px) {
+            .story_text__bg {
+                font-size: 100px;
+            }
+
+            .story_text__first {
+                top: 30px;
+                right: 95px;
+            }
+
+            #story {
+                padding: 105px 0 100px;
+            }
+
+            #test #story {
+                padding: 200px 0 100px;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            .story_text__first {
+                top: 0;
+                right: 0;
+            }
+
+            .story_grid {
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 50px;
+            }
+
+            #story .play_button__content {
+                right: 50px;
+                top: initial;
+                bottom: 15px;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            .story_video {
+                position: relative;
+            }
+
+            #story .play_button__content {
+                right: 10px;
+            }
+
+            .story_grid {
+                grid-template-columns: 50% 45%;
+            }
+
+            #test #story {
+                padding: 30px 0;
+            }
+
+            .story_text__bg {
+                display: none;
+            }
+
+            .story_grid {
+                grid-template-columns: 1fr;
+                grid-row-gap: 30px;
+            }
+
+            .story_content h2, .story_content h3 {
+                text-align: center;
+            }
+
+            .story_paragraph, .story_video {
+                padding: 0 15px;
+            }
+
+            #story .play_button__content {
+                bottom: 25px;
+                top: initial;
+                right: 25px;
+            }
+
+
+        }
+        @media screen and (max-width: 480px) {
+            #story {
+                padding: 30px 0;
+            }
+
+            .story_grid {
+                grid-template-columns: 1fr;
+                grid-row-gap: 20px;
+            }
+
+            .story_paragraph {
+                margin-top: 20px;
+            }
+
+
+        }
+    </style>
+
+
+
+
+    <section id="warranty">
+        <div class="h3_heading center orange">Курси програмування</div>
+        <div class="h2_heading center ">java з гарантією</div>
+
+        <div class="wrapper warranty_grid">
+            <div class="warranty_image">
+                <picture>
+                    <source data-srcset="image/logo/webp/Girl-java.webp" type="image/webp" srcset="index_files/Girl-java.webp 1x">
+                    <img class=" lazyloaded" data-src="image/logo/Girl-java.png" alt="okten" src="index_files/Girl-java.png">
+                </picture>
+            </div>
+
+            <div class="warranty_list">
+                <ul>
+                    <li>
+                        <div class="warranty_list__title">Стажування в ІТ-компанії</div>
+                        <p class="warranty_list__text">Покажи себе на курсі і ще до закінчення навчання ми
+                                                       відправимо
+                                                       тебе на стажування в ІТ-компанію.</p>
+                    </li>
+
+                    <li>
+                        <div class="warranty_list__title">Три випускних проекти</div>
+                        <p class="warranty_list__text">Наприкінці курсу ти будеш мати три проекти, з якими легко
+                                                       працевлаштуєшся.</p>
+                    </li>
+
+                    <li>
+                        <div class="warranty_list__title">Інтенсивність</div>
+                        <p class="warranty_list__text">На відміну від інших наші студенти вчаться 6 разів на тижден
+                                                       впродовж всього терміну. Саме тому вони краше за випускників всіх
+                                                       інших шкіл та легко
+                                                       працевлаштовуються.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="recording" class="bg_blue">
+        <div class="recording_bg__text">записатись</div>
+        <div class="wrapper">
+            <div class="recording_grid"><h3 class="h3_heading">Навчайся зараз, сплачуй потім</h3>
+                <h2 class="h2_heading white">Розтермінування до 24 місяців</h2>
+
+                <p class="recording_text white">Не має всієї необхідної суми? Не біда, адже Ви можете оформити
+                                                розтермінування
+                                                строком до 24 місяців.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="owu">
+        <h3 class="h3_heading center blue">Чому варто нам довіряти?</h3>
+        <div class="h2_heading center">Часті запитання</div>
+
+        <div class="wrapper owu_grid">
+            <div class="owu_grid__column">
+                <div class="owu_item">
+                    <div class="owu_item__title h3_heading before_01"><span>Гарантії працевлаштування?</span>
+                    </div>
+                    <div class="owu_item__text paragraph">Всі хто проходив наш унікальтний курс зі стажуванням
+                                                          влаштувались на роботу. І ми єдині в Україні, хто мають відео
+                                                          відгуки від роботодавців.
+                    </div>
+                </div>
+
+                <div class="owu_item">
+                    <div class="owu_item__title h3_heading before_02"><span>Що таке "повторка"?</span>
+                    </div>
+                    <div class="owu_item__text paragraph">Це можливість пройти курс повторно у разі якщо ви щось
+                                                          пропустили. Вона повністтю безкоштовна, та має необмежену
+                                                          кількість разів. Іншими словами з
+                                                          нами
+                                                          ви отримаєте знання не переплачуючі за них.
+                    </div>
+                </div>
+
+                <div class="owu_item">
+                    <div class="owu_item__title h3_heading before_03"><span>Що таке "Стажування" ?</span></div>
+                    <div class="owu_item__text paragraph">Стажування - це інкубатор досвіду на власному проекті
+                                                          впродовж
+                                                          5 місяців після закінчення навчання. Саме під час цього
+                                                          періоду ви отримаєте практичний
+                                                          досвід,
+                                                          який так необхідний для успішного проходження співбесіди.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="owu_grid__column owu_grid__image flex-center">
+                <picture>
+                    <source data-srcset="image/logo/webp/2happy_girls.webp" type="image/webp" srcset="index_files/2happy_girls.webp 1x">
+                    <img class=" lazyloaded" data-src="image/logo/2happy_girls.png" alt="Happy girls" src="index_files/2happy_girls.png">
+                </picture>
+            </div>
+
+            <div class="owu_grid__column">
+                <div class="owu_item">
+                    <div class="owu_item__title h3_heading before_04"><span>Рейтинг компанії?</span>
+                    </div>
+                    <div class="owu_item__text paragraph">Більше 300 відео відгуків від працевлаштованих, відео
+                                                          відгуки
+                                                          роботодавців, більше 600 відгуків в Google та Facebook з
+                                                          загальним рейтингом 4.9 зірок, та
+                                                          більше 800 працевлаштованих випускників
+                    </div>
+                </div>
+
+                <div class="owu_item">
+                    <div class="owu_item__title h3_heading before_05"><span>Рорзтермінування?</span></div>
+                    <div class="owu_item__text paragraph">Є можливість розтермінування платежів строком до 24
+                                                          місяців з
+                                                          закріпленням ціни. Це найкращі умови розтермінування в
+                                                          Україні. Всі деталі щодо
+                                                          розтермінування,
+                                                          ви можете дізнатись в нашого менеджера.
+                    </div>
+                </div>
+
+                <div class="owu_item">
+                    <div class="owu_item__title h3_heading before_06"><span>Скільки триває курс ?</span></div>
+                    <div class="owu_item__text paragraph">Базовий курс зі стажуванням триває - 909 годин, базовий
+                                                          курс -
+                                                          230 годин. Це найбільший курс на ринку України та СНД. Заняття
+                                                          6 разів на тиждень. Саме тому
+                                                          така висока продуктивність. Поки інші відпочивають ви
+                                                          навчаєтесь.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--lazyload script-->
+    <script src="index_files/lazysizes.js" async=""></script>
+    <!--    slider js-->
+    <script src="index_files/splide.js"></script>
+    <!--    <script src="js/splide.min.js"></script>-->
+    <!--slider css-->
+    <link rel="stylesheet" href="index_files/splide.css">
+
+    <!--google maps api-->
+    <script defer="defer" src="index_files/api.js"></script>
+
+    <link rel="stylesheet" href="index_files/all.css">
+
+    <link rel="stylesheet" href="index_files/css.css">
+
+
+<!--     end footer   -->
+<script src="index_files/splide_002.js"></script>
+<script src="index_files/main.js"></script>
+<script src="index_files/javascript.js"></script>
+
+
+    <style>
+        .video-overlay {
+            position: fixed; /* фиксированное положение */
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5); /* цвет фона */
+            z-index: 1050;
+            opacity: 0; /* по умолчанию модальное окно прозрачно */
+            -webkit-transition: opacity 200ms ease-in;
+            -moz-transition: opacity 200ms ease-in;
+            transition: opacity 200ms ease-in; /* анимация перехода */
+            pointer-events: none; /* элемент невидим для событий мыши */
+            margin: 0;
+            padding: 0;
+        }
+
+        .video-overlay.is-active {
+            opacity: 1; /* делаем окно видимым */
+            pointer-events: auto; /* элемент видим для событий мыши */
+            overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+        }
+
+        .close_video, .video-overlay-close {
+            position: absolute;
+            z-index: 9999;
+            top: 50px;
+            right: 50px;
+            line-height: 1;
+            color: #ffffff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 500ms;
+            font-size: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .close_video:hover, .video-overlay-close:hover {
+            color: #ff9638;
+        }
+
+        .video-overlay iframe {
+            width: 50%;
+            height: 50vh;
+        }
+
+        .video-overlay iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .video-overlay iframe {
+                width: 90%;
+            }
+
+        }
+
+    </style>
+
+    <div id="video-overlay" class="video-overlay">
+        <span class="close_video">×</span>
+    </div>
+
+    <script>
+		let videoOverlay = document.querySelector('#video-overlay');
+
+		function playMobile(play) {
+			play.forEach((el) => {
+				//         el.onclick = () => {
+				//             let id = el.children[0].dataset.id;
+				//             let videoReviewWrap = '';
+				//             videoOverlay.classList.add('is-active');
+				//             videoReviewWrap = `
+				//     <iframe width="500" height="360" src="https://youtube.com/embed/${id}"
+				//                             frameborder="0"
+				//                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+				//                             allowfullscreen id="Youtube"></iframe>
+				// `;
+				//
+				//             videoOverlay.innerHTML += videoReviewWrap;
+				//
+				//         }
+				el.onclick = () => videoWindow(el, videoOverlay);
+			});
+		}
+
+		playMobile(document.querySelectorAll('.play_button__content'));
+		playMobile(document.querySelectorAll('.video-play-center'));
+		playMobile(document.querySelectorAll('.project-item'));
+
+		let stopVideos = function () {
+			let videos = document.querySelectorAll('.iframe-video, video');
+			Array.prototype.forEach.call(videos, function (video) {
+				if (video.tagName.toLowerCase() === 'video') {
+					video.pause();
+				} else {
+					let src = video.src;
+					video.src = src;
+				}
+			});
+		};
+
+		videoOverlay.onclick = function () {
+			this.classList.remove('is-active');
+			stopVideos();
+		};
+    </script>
+
+
+<!--to -> thank-page.php-->
+
+    <style>
+        .body-popap {
+            position: fixed;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: rgba(0, 0, 0, .8);
+            height: 100vh;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .body-popap.is-active {
+            opacity: 1;
+            z-index: 9999;
+        }
+
+        .window-modal {
+            width: 575px;
+            padding: 45px 0 65px;
+            background: #292929;
+            color: #FFFFFF;
+        }
+
+        .modal-contain {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .title-modal {
+            margin-bottom: 35px;
+            font-weight: 900;
+            font-size: 21px;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .window-modal .forms input {
+            width: 100%;
+        }
+
+        .forms input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #ffffff;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 60px;
+            color: #ffffff;
+        }
+
+        .forms input:hover {
+            border-bottom: 1px solid #FF9638;
+        }
+
+        .forms input:focus {
+            outline: none;
+        }
+
+        button.modal-btn {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 60px;
+            text-transform: uppercase;
+            color: #292929;
+            width: 100%;
+            background: #FFE200;
+            border: 2px solid #FFE200;
+            box-sizing: border-box;
+            border-radius: 6px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="body-popap flex-center" id="callback">
+
+        <div class="window-modal">
+            <span class="video-overlay-close">×</span>
+            <div class="container">
+                <div class="modal-contain">
+                    <h2 class="title-modal">
+                        перетелефонуйте мені
+                    </h2>
+                    <div class="forms">
+                        <form action="thank-page-consultation" method="post">
+                            <input required="" type="text" placeholder="Ім'я" name="name">
+                            <input type="text" placeholder="Прізвище" name="surname">
+                            <input id="inputCallBackPhone" required="" type="text" placeholder="0671231212" name="phone">
+                            <button class="modal-btn" type="submit">надіслати</button>
+                        <input name="utm" type="hidden"></form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body></html>

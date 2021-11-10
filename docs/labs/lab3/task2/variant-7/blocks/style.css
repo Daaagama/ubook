@@ -1,0 +1,38 @@
+.container {
+  width: 70%;
+  height: 100vh;
+  margin-left: 15%;
+  font-size: 20pt;
+  text-align: center;
+}
+
+.header {
+  height: 15%;
+  background-color: blue;
+}
+
+.block-2 {
+  float: left;
+  height: 75%;
+  width: 20%;
+  background-color: yellow;
+}
+
+.block-4 {
+  float: left;
+  height: 75%;
+  width: 60%;
+}
+
+.block-5 {
+  float: left;
+  height: 75%;
+  width: 20%;
+  background-color: yellow;
+}
+
+.footer {
+  height: 8%;
+  background-color: blue;
+  clear: both;
+}

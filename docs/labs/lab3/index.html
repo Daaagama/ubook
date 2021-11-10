@@ -1,0 +1,535 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Основи Frontend та Backend розробок</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="css/lab2.css">
+</head>
+
+
+<body>
+
+  <header>
+    <center>
+      <h1 class="top-header">
+        Звіти з лабораторних робіт з дисципліни<br>«Основи Frontend та Backend Розробок»
+      </h1>
+      <a class="button" href="../lab1/index.html">Лабораторна робота №1</a>
+      <a class="button" href="../lab2/index.html">Лабораторна робота №2</a>
+      <a class="button" href="../lab3/index.html">Лабораторна робота №3</a>
+      <a class="button" href="#">Лабораторна робота №4</a>
+      <a class="button" href="#">Лабораторна робота №5</a>
+      <a class="button" href="#">Лабораторна робота №6</a>
+      <a class="button" href="#">Лабораторна робота №7</a>
+      <a class="button" href="#">Лабораторна робота №8</a>
+      <a class="button" href="#">Лабораторна робота №9</a>
+    </center>
+  </header>
+
+    <div id="main">
+    <nav>
+      <h2>Лабораторна робота №3</h2>
+      <ul class="sidebar">
+        <li><a class="button sidebar-button" href="#subject">Тема Мета лаби №3</a></li>  
+        <li><a class="button sidebar-button" href="#layout-templates">Зовнішній вигляд макету</a></li>  
+        <li><a class="button sidebar-button" href="#layout-html">HTML-код макету</a></li>  
+        <ul class="sidebar-nested">
+          <li><a class="button sidebar-button" href="#layout-table">Розмітка сторінки за допомогою таблиці</a></li>  
+          <li><a class="button sidebar-button" href="#layout-blocks">Розмітка сторінки за допомогою плаваючих блоків</a></li>  
+        </ul>
+        <li><a class="button sidebar-button" href="#task2-links">Посилання на виконане завдання 2</a></li>
+        <li><a class="button sidebar-button" href="#task3-links">Посилання на виконане завдання 3</a></li>
+        <li><a class="button sidebar-button" href="#conclusion">Висновки</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2><a name="subject">Тема та мета Лабораторної роботи №3</a></h2>
+        <p>
+        <b>Тема:</b><br>
+            Блочна верстка HTML-документу за макетом. Верстка засобами CSS та flexbox.
+        </p>
+
+        <p>
+        <b>Мета:</b></br>
+            Придбати практичні навички роботи з верстки сторінок засобами CSS,
+            верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів
+            макетів веб-сторінок, придбати практичні навички роботи  верстки сторінок
+            засобами CSS та FLEXBOX   
+        </p>
+    
+        <h3>Місце розташування лабораторних робіт</h3>
+        <p class="m-2">
+          <a href="https://github.com/drewg3r/ubook">Посилання на репозиторій</a>
+        </p>
+
+
+      <h2><a name="layout-templates">Зовнішній вигляд макету</a></h2>
+        <p>
+        <b>Варіант 4:</b><br>
+          <img src="img/layout-template-4.png" width=30%><br><br>
+
+        <b>Варіант 7:</b><br>
+          <img src="img/layout-template-7.png" width=30%>
+        </p>
+
+      <h2><a name="layout-html">HTML-код макету</a></h2>
+        <p class="m-1">
+          Далі наведено вихідний код макетів, виконаних з використанням таблиць
+          та блокових елементів
+        </p>
+
+
+      <h2><a name="layout-table">Розмітка сторінки за допомогою таблиці</a></h2>
+        <p class="m-1">
+        <b>Варіант 4:</b>
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-1">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34;&gt;
+  &lt;title&gt;Варіант №4 верска за допомогою таблиці&lt;/title&gt;
+  &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;table-style.css&#34;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;table style=&#34;width: 100%; height: 100%;&#34;&gt;
+
+    &lt;!-- first row --&gt;
+    &lt;tr class=&#34;first-row&#34; style=&#34;height:  20vh; border: solid 1px; background-color: DarkOrange;&#34;&gt;
+      &lt;td style=&#34;width: 5%; background-color: DarkOrange;&#34;&gt;
+      &lt;/td&gt;
+
+      &lt;td&gt;
+        &lt;table class=&#34;nested-table&#34; style=&#34;background-color: DarkOrange;&#34;&gt;
+          &lt;tr style=&#34;width: 20%;&#34;&gt;
+            &lt;td&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr style=&#34;width: 20%; background-color: white; border: solid 1px;&#34;&gt;
+            &lt;td&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr style=&#34;width: 20%; background-color: DarkOrange;&#34;&gt;
+            &lt;td&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/td&gt;
+
+      &lt;td style=&#34;width: 70%; text-align: right; padding: 0 20px;&#34;&gt;
+        1
+      &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;!-- second row --&gt;
+    &lt;tr&gt;
+      &lt;table style=&#34;height: 60vh; width: 100%&#34;&gt;
+        &lt;tr&gt;
+          &lt;td style=&#34;width: 30%;
+                     background-color: blue;
+                     border-right: solid 1px;
+                     border-left: solid 1px;
+                     text-align: center;&#34;&gt;
+            2
+          &lt;/td&gt;
+          &lt;td&gt;
+            &lt;table style=&#34;border-collapse: separate;
+                          border-spacing: 20px;
+                          height: 100%;
+                          width: 100%;&#34;&gt;
+              &lt;tr&gt;
+              &lt;td style=&#34;width: 50%;&#34;&gt;
+                &lt;table style=&#34;width: 100%; height: 100%;&#34;&gt;
+                  &lt;tr style=&#34;height: 80%;
+                             border: solid 1px;
+                             text-align: center;&#34;&gt;
+                    &lt;td &gt;3&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr style=&#34;background-color: red; border: solid 1px;&#34;&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/table&gt;
+              &lt;/td&gt;
+              &lt;td style=&#34;width: 50%;
+                         background-color: blue;
+                         border: solid 1px;
+                         text-align: center;&#34;&gt;
+                4
+              &lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/tr&gt;
+
+    &lt;!-- third row --&gt;
+    &lt;tr&gt;
+      &lt;table style=&#34;border: solid 1px;
+                    width: 100%;
+                    height: 20vh;
+                    background-color: darkorange;&#34;&gt;
+        &lt;tr&gt;
+          &lt;td style=&#34;padding: 0 20px;&#34;&gt;5&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/tr&gt;
+
+  &lt;/table&gt;
+&lt;/body&gt;</pre>
+          </code>
+
+        <b>CSS-код</b>
+          <code>
+            <pre class="m-1">
+  .nested-table tr {
+    height: 33%;
+  }
+
+  table.nested-table  {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  tr.first-row {
+    padding: 0;
+    margin: 0;
+  }
+
+  table {
+    margin: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }</pre>
+            </code>
+        <br>
+        <b>Варіант 7:</b>
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-1">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34;&gt;
+  &lt;title&gt;Основи Frontend та Backend розробок&lt;/title&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;./style.css&#34;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;table class=&#34;layout&#34;&gt;
+    &lt;tr&gt;
+      &lt;th class=&#34;header&#34; colspan=3&gt;1&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;th class=&#34;col-2&#34;&gt;2&lt;/th&gt;
+      &lt;th class=&#34;col-4&#34;&gt;4&lt;/th&gt;
+      &lt;th class=&#34;col-5&#34;&gt;5&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;th class=&#34;footer&#34; colspan=3&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+          </code>
+
+        <b>CSS-код</b>
+          <code>
+            <pre class="m-1">
+  table, th, td {
+    border-collapse: collapse;
+    border: 2px solid #000;
+  }
+
+  table.layout {
+
+    height: 98vh;
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  th.header {
+    height: 15%;
+    background-color: blue;
+  }
+
+  th.col-2 {
+    background-color: yellow;
+    width: 20%;
+  }
+
+  th.col-4 {
+    width: 60%;
+  }
+
+  th.col-5 {
+    background-color: yellow;
+    width: 20%;
+  }
+
+  th.footer {
+    height: 10%;
+    background-color: blue;
+  }</pre>
+            </code>
+            </p>
+
+
+      <h2><a name="layout-blocks">Розмітка сторінки за допомогою плаваючих блоків</a></h2>
+        <p class="m-1">
+        <b>Варіант 4:</b>
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-1">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34;&gt;
+  &lt;title&gt;Варіант №4 верска за допомогою плаваючих блоків&lt;/title&gt;
+  &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;block-style.css&#34;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- top element --&gt;
+  &lt;div class=&#34;top-element&#34;&gt;
+    1
+    &lt;div class=&#34;nested-top&#34;&gt;&lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;!-- middle element --&gt;
+  &lt;div class=&#34;middle-element&#34;&gt;
+    &lt;div class=&#34;nested-left&#34;&gt;
+      2
+    &lt;/div&gt;
+    &lt;div class=&#34;nested-container&#34;&gt;
+      &lt;div class=&#34;nested-center&#34;&gt;
+        &lt;div class=&#34;nested-center-top&#34;&gt;
+          3
+        &lt;/div&gt;
+        &lt;div class=&#34;nested-center-down&#34;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;span&gt;&lt;/span&gt;
+      &lt;div class=&#34;nested-right&#34;&gt;
+        4
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- down element --&gt;
+  &lt;div class=&#34;down-element&#34;&gt;
+    5
+  &lt;/div&gt;
+&lt;/body&gt;</pre>
+          </code>
+
+        <b>CSS-код</b>
+          <code>
+            <pre class="m-1">
+  div {
+    box-sizing: border-box;
+  }
+
+  .top-element {
+    background-color: darkorange;
+    border: solid 1px;
+    height: 20vh;
+    padding-left: 5%;
+    max-height: 20vh;
+    display: block;
+    padding-right: 20px;
+    text-align: right;
+  }
+
+  .middle-element {
+    height: 60vh;
+    display: block;
+  }
+
+  .down-element {
+    background-color: darkorange;
+    border: solid 1px;
+    height: 20vh;
+    display: block;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .nested-top {
+    border: solid 1px;
+    height: 33%;
+    width: 25%;
+    background-color: white;
+    margin: 2hv 6vh 6vh 6vh;
+  }
+
+  .nested-left {
+    height: 100%;
+    width: 30%;
+    background-color: blue;
+    float: left;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .nested-center {
+    width: 47%;
+    height: 100%;
+    border: solid 1px;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 6%;
+  }
+
+  .nested-right {
+    background-color: blue;
+    border: solid 1px;
+    width: 47%;
+    height: 100%;
+    float: right;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .nested-container {
+    height: 100%;
+    width: 70%;
+    float: right;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .nested-center-top {
+    height: 80%;
+
+  }
+  .nested-center-down {
+    height: 20%;
+    width: 100%;
+    background-color: red;
+    border-top: solid 1px;
+  }</pre>
+            </code>
+        <br>
+        <b>Варіант 7:</b>
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-1">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;utf-8&#34;&gt;
+  &lt;title&gt;Основи Frontend та Backend розробок&lt;/title&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;./style.css&#34;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;table class=&#34;layout&#34;&gt;
+    &lt;tr&gt;
+      &lt;th class=&#34;header&#34; colspan=3&gt;1&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;th class=&#34;col-2&#34;&gt;2&lt;/th&gt;
+      &lt;th class=&#34;col-4&#34;&gt;4&lt;/th&gt;
+      &lt;th class=&#34;col-5&#34;&gt;5&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;th class=&#34;footer&#34; colspan=3&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+          </code>
+
+        <b>CSS-код</b>
+          <code>
+            <pre class="m-1">
+  .container {
+    width: 70%;
+    height: 100vh;
+    margin-left: 15%;
+    font-size: 20pt;
+    text-align: center;
+  }
+
+  .header {
+    height: 15%;
+    background-color: blue;
+  }
+
+  .block-2 {
+    float: left;
+    height: 75%;
+    width: 20%;
+    background-color: yellow;
+  }
+
+  .block-4 {
+    float: left;
+    height: 75%;
+    width: 60%;
+  }
+
+  .block-5 {
+    float: left;
+    height: 75%;
+    width: 20%;
+    background-color: yellow;
+  }
+
+  .footer {
+    height: 8%;
+    background-color: blue;
+    clear: both;
+  }</pre>
+            </code>
+            </p>
+
+      <h2><a name="task2-links">Посилання на виконане завдання 2</a></h2>
+        <p class="m-1">
+        <b>Варіант 4:</b><br>
+        <a href="task2/variant-4/tables" target="_blank">Розмітка за допомогою таблиці</a><br>
+        <a href="task2/variant-4/blocks" target="_blank">Розмітка за допомогою блоків</a>
+        </p>
+
+        <p class="m-1">
+        <b>Варіант 7:</b><br>
+        <a href="task2/variant-7/tables" target="_blank">Розмітка за допомогою таблиці</a><br>
+        <a href="task2/variant-7/blocks" target="_blank">Розмітка за допомогою блоків</a>
+        </p>
+
+      <h2><a name="task3-links">Посилання на виконане завдання 3</a></h2>
+        <p class="m-1">
+        <a href="task3/variant-4" target="_blank">Варіант 4</a>
+        </p>
+
+        <p class="m-1">
+        <a href="task3/variant-7" target="_blank">Варіант 7</a>
+        </p>
+
+      <h2><a name="conclusion">Висновки</a></h2>
+        <p class="m-1">
+          В процесі виконання роботи було здобуто практичні навички роботи з селекторами,
+          ідентифікаторами, списками, різноманітними властивостями кольору і фону,
+          зовнішніми та внутрішніми відступами, плаваючими елементами, оформленням
+          текстових елементів.
+        </p>
+
+    </article>
+    </div>
+
+  <footer>
+
+    Бригада №10 | <a class="footer-repo-link" href="https://github.com/drewg3r/ubook">github-репозиторій</a> | © 2021 «Основи Frontend та Backend Розробок»
+  </footer>
+</body>
+
+</html>

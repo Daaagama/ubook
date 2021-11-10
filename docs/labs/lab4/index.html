@@ -1,0 +1,489 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Основи Frontend та Backend розробок</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <script src="js/variant-7.js" language="javascript"></script>
+  <link rel="stylesheet" href="css/lab4.css">
+</head>
+
+
+<body>
+
+  <header>
+    <center>
+      <h1 class="top-header">
+        Звіти з лабораторних робіт з дисципліни<br>«Основи Frontend та Backend Розробок»
+      </h1>
+      <a class="button" href="../lab1/index.html">Лабораторна робота №1</a>
+      <a class="button" href="../lab2/index.html">Лабораторна робота №2</a>
+      <a class="button" href="../lab3/index.html">Лабораторна робота №3</a>
+      <a class="button" href="../lab4/index.html">Лабораторна робота №4</a>
+      <a class="button" href="#">Лабораторна робота №5</a>
+      <a class="button" href="#">Лабораторна робота №6</a>
+      <a class="button" href="#">Лабораторна робота №7</a>
+      <a class="button" href="#">Лабораторна робота №8</a>
+      <a class="button" href="#">Лабораторна робота №9</a>
+    </center>
+  </header>
+
+    <div id="main">
+    <nav>
+      <h2>Лабораторна робота №4</h2>
+      <ul class="sidebar">
+        <li><a class="button sidebar-button" href="#subject">Постановка задачі лаби №4</a></li>  
+        <li><a class="button sidebar-button" href="#javascript-usage">Способи функціонального застосування JavaScript</a></li>
+        <ul class="sidebar-nested">
+          <li><a class="button sidebar-button" href="#url-scheme">Схема URL</a></li>  
+          <li><a class="button sidebar-button" href="#handler">Обробник подій</a></li>  
+          <li><a class="button sidebar-button" href="#entity">Підстановка (entity)</a></li>  
+          <li><a class="button sidebar-button" href="#script-tag">Вставка (тег script)</a></li>  
+        </ul>
+        <li><a class="button sidebar-button" href="#task4-arrays">Масиви (4 пункт)</a></li>  
+        <li><a class="button sidebar-button" href="#task6">Виконання 6 пункту</a></li>
+        <li><a class="button sidebar-button" href="#conclusion">Висновки</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2><a name="subject">Постановка задачі лабораторної роботи №4</a></h2>
+        <p>
+        <b>Тема:</b><br>
+            Функціональне застосування JavaScript у HTML-документі. Класи, об'єкти, функції в мові JavaScript. Події та обробка подій. Програмна взаємодія з HTML документами на основі DOM API.
+        </p>
+
+        <p>
+        <b>Мета:</b></br>
+            Здобути практичні навички маніпулювання інформаційним вмістом Web-документа засобами мови JavasSript, використання об’єктів, масивів, функцій, подій, обробників подій у сценаріях на мові JavaSript
+        </p>
+    
+        <h3>Місце розташування лабораторних робіт</h3>
+        <p class="m-2">
+          <a href="https://github.com/drewg3r/ubook">Посилання на репозиторій</a>
+        </p>
+
+
+      <h2><a name="javascript-usage">Способи функціонального застосування JavaScript</a></h2>
+
+        <h3><a name="url-scheme">Схема URL</a></h3>
+        <p>
+        В якості прикладу використання схеми URL наведено посилання яке викликає спливаюче вікно.
+        </p>
+
+        <p class="m-1">
+          <a href="JavaScript:alert('Ви натиснули на посилання');">Приклад схеми URL</a>
+        </p>
+
+        <p class="m-1">
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-2">
+&lt;a href=&#34;JavaScript:alert('Ви натиснули на посилання');&#34;&gt;
+  Приклад схеми URL
+&lt;/a&gt;</pre>
+          </code>
+
+        <h3><a name="handler">Обробник подій</a></h3>
+        <p>
+        В якості прикладу використання обробника подій наведено кнопку яка викликає спливаюче вікно з повідомленням.
+        </p>
+
+        <p class="m-1">
+          <button onclick="alert('Ви натиснули на кнопку')">Кнопка</button>
+        </p>
+
+        <b class="m-1">HTML-код</b>
+          <code>
+            <pre class="m-2">
+&lt;button onclick=&#34;alert('Ви натиснули на кнопку')&#34;&gt;Кнопка&lt;/button&gt;</pre>
+          </code>
+
+
+        <h3><a name="entity">Підстановка(entity)</a></h3>
+        <p>
+        В якості прикладу використання підстановки наведено скрипт який підставляє поточний час в текстове поле.
+        </p>
+
+        <p class="m-1">
+        <input type="text" id="time-field">
+        </p>
+        <script>
+          function setTime(){
+            date = new Date();
+            hours = date.getHours();
+            minutes = date.getMinutes();
+            seconds = date.getSeconds();
+            document.getElementById("time-field").value = "Поточний час - "+
+            hours + ":" + minutes + "." + seconds; 
+          }
+          setInterval(setTime, 1000);
+        </script>
+
+        <b class="m-1">HTML-код</b>
+          <code>
+            <pre class="m-2">
+&lt;input type=&quot;text&quot; id=&quot;time-field&quot;&gt;
+
+&lt;script&gt;
+  function setTime(){
+    date = new Date();
+    hours = date.getHours();
+    minutes = date.getMinutes();
+    seconds = date.getSeconds();
+    document.getElementById(&quot;time-field&quot;).value = &quot;Поточний час - &quot;+
+    hours + &quot;:&quot; + minutes + &quot;.&quot; + seconds; 
+  }
+  setInterval(setTime, 1000);
+&lt;/script&gt;
+            </pre>
+          </code>
+
+        <h3><a name="script-tag">Вставка(тег script)</a></h3>
+        <p>
+        Тег script було застосовано в попередньому прикладі — <a href="#entity">Підстановка (entity)</a>.
+        </p>
+        
+      <h2><a name="task4-arrays">Масиви(4 пункт)</a></h2>
+        <h3>Завдання</h3>
+
+        <p class="m-2">
+        <b>Варіант 4:</b><br>
+          Задані одновимірні масиви А, В з 10 чисел. Побудувати масив С, кожний елемент якого обчислюється за формулою:
+          <br>
+          <img src="img/task4-variant4.png" width=30%><br><br>
+          В масиві С поміняти максимальний елемент і перший. Вивести масиви до переставлення елементів та після.
+          Впорядкувати масив у порядку зростання методом бульбашки. Надрукувати вхідний та вихідний масив.
+          Застосувати функції.<br><br>
+
+        <b>Варіант 7:</b><br>
+          Створити одновимірний массив. Знайти найбільший серед від’ємних та найменший серед додатних елементів масиву. 
+          Упорядкувати масив у порядку зменшення методом вибору. Надрукувати вхідний та вихідний масив.
+          Застосувати функції.
+
+        </p>
+
+        <h3>Код реалізації завдання</h3>
+        <p class="m-2">
+        <b>Варіант 4:</b><br>
+        <b>JavaScript-код</b>
+          <code>
+            <pre class="m-2">
+var arrA = [5, 2, 1, 1, 2, 1, 1, 5, 1, 1];
+var arrB = [2, 1, 3, 1, 3, 1, 2, 1, 1, 4];
+var arrC = [];
+
+function calculateC() {
+  arrC = calcC();
+  document.getElementById(&quot;arrayC1&quot;).innerHTML = 
+  arrC.map(round).join(&quot;, &quot;);
+
+  arrC = changeElements(arrC);
+  document.getElementById(&quot;arrayC2&quot;).innerHTML = 
+  arrC.map(round).join(&quot;, &quot;);
+
+  arrC = bubbleSort(arrC);
+  document.getElementById(&quot;arrayC3&quot;).innerHTML = 
+  arrC.map(round).join(&quot;, &quot;);
+}
+
+function calcC() {
+  var c = []
+  for (var i = 0; i < 10; i++) {
+      if (arrA[i] == arrB[i]) {
+        c[i] = 1;
+      } else {
+        c[i] = (1 / (arrA[i] - arrB[i]));
+      }
+  }
+  return c
+}
+
+function changeElements(arr) {
+   var arr_first = arr[0]
+  arr[0] = arr[9];
+  arr[9] = arr_first;
+  return arr
+}
+
+function bubbleSort(arr){
+  for(var i = 0; i < arr.length; i++){
+    for(var j = 0; j < ( arr.length - i -1 ); j++){
+      if(arr[j] > arr[j+1]){
+        var temp = arr[j]
+        arr[j] = arr[j + 1]
+        arr[j+1] = temp
+      }
+    }
+  }
+  return arr
+}
+
+
+function round(element){
+  return element.toFixed(2);
+}</pre>
+          </code>
+        </p>
+
+        <p class="m-2">
+        <b>Варіант 7:</b><br>
+        <code>
+            <pre>
+function generateRandomArray() {
+    return Array.from({length: 20}, () => Math.floor(Math.random() * 40)-20);
+}
+
+function getMinPositiveElement(array) {
+    result = Math.max.apply(null, array);
+    for (var i = 0; i < array.length; i++) {
+        if ((array[i] > 0) && (result > array[i])) {
+            result = array[i];
+        }
+    }
+    return result;
+}
+
+function getMaxNegativeElement(array) {
+    result = Math.min.apply(null, array);
+    for (var i = 0; i < array.length; i++) {
+        if ((array[i] < 0) && (result < array[i])) {
+            result = array[i];
+        }
+    }
+    return result;
+}
+
+function selectionSort(inputArr) { 
+    let n = inputArr.length;
+        
+    for(let i = 0; i < n; i++) {
+        let min = i;
+        for(let j = i; j < n; j++) {
+            if(inputArr[j] < inputArr[min]) {
+                min=j; 
+            }
+         }
+         if (min != i) {
+             let tmp = inputArr[i]; 
+             inputArr[i] = inputArr[min];
+             inputArr[min] = tmp;      
+        }
+    }
+    return inputArr.reverse();
+}
+
+function task4v7() {
+    var a = generateRandomArray();
+    var ra = [...a];
+    var r1 = getMaxNegativeElement(a);
+    var r2 = getMinPositiveElement(a);
+    var r3 = selectionSort(a);
+    document.getElementById(&#34task-4-variant-7&#34).innerHTML = ra + &#34&lt;br&gt;&#34+r1+&#34&lt;br&gt;&#34+r2+&#34&lt;br&gt;&#34+r3;
+}</pre>
+        </code>
+
+        </p>
+
+        <h3>Результат виконання</h3>
+        <b class="m-1">Варіант 4:</b><br>
+          
+          <div class="result">
+          <form>
+            <p>Введіть елементи першого масиву</p>
+            <input class="m-1" type="text" id="ArrayA">
+            <p>Введіть елементи другого масиву</p>
+            <input class="m-1" type="text" id="ArrayB">
+          </form><br>
+          <button class="m-1" onclick="return calculateC()">Розрахувати з заданими значеннями</button>        
+          
+          <div class="m-1">
+          <br>
+          Масив A
+          <p id="arrayA"></p>
+          Масив B
+          <p id="arrayB"></p>
+          <b>Результати:</b><br>
+          Масив C після створення
+          <p id="arrayC1"></p>
+          Масив C після того як замінили місцями перший та останній елемент
+          <p id="arrayC2"></p>
+          Масив C після сортування
+          <p id="arrayC3"></p>
+          </div>
+          <script type="text/javascript" src="js/task4-variant4.js"></script>
+        </div>
+
+        <p class="m-2">
+        <b>Варіант 7:</b>
+          <button onclick="task4v7()">Виконати</button>
+        <br>
+        <div id="task-4-variant-7" class="m-2"></div>
+        </p>
+
+      <h2><a name="task6">Виконання 6 пункту</a></h2>
+      <h3>Завдання</h3>
+        <p class="m-2">
+        <b>Варіант 4:</b><br>
+          Текстовий редактор<br>
+          <i>Реалізувати редактор, який би дозволяв виконувати форматування тексту, який уводиться. 
+          Обов‘язкові елементи форматування: напівжирність, нахил, підкреслювання, колір тексту, 
+          регістр символів. Елементи форматування мають бути доступними через відповідні кнопки, 
+          форматований текст – у окремому вікні на сторінці.</i>
+        </p>
+
+        <p class="m-2">
+        <b>Варіант 7:</b><br>
+          Гістограма<br>
+          <i>Реалізувати можливість уведення довільної кількості чисел у елементи форми та побудови 
+          нормалізованої за максимальним числом гістограми значень цих полів. При візуалізації 
+          гістограми використовувати лише засоби CSS.</i>
+        </p>
+
+        <h3>Код реалізації завдання</h3>
+        <p class="m-2">
+        <b>Варіант 4:</b><br>
+        </p>
+
+        <p class="m-2">
+        <b>Варіант 7:</b><br>
+        </p>
+
+        <h3>Результат виконання</h3>
+        <p class="m-2">
+        <b>Варіант 4:</b><br>
+                <div class="result">
+          <link rel="stylesheet"
+            href=
+        "https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity=
+        "sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous" />
+          <style>
+            h1 {
+              text-align: center;
+              color: blue;
+              font-family: 'Montserrat', sans-serif;
+            }
+            
+            section {
+              padding-top: 0;
+              height: 100vh;
+            }
+    
+              .side {
+                margin-left: 0;
+              }
+              
+              button {
+                margin: 10px;
+                border-color: blue;
+                margin-bottom: 25px;
+              }
+              
+              button:hover {
+                background-color: lightblue;
+              }
+              
+              textarea {
+                padding: 3%;
+                border-color: blue;
+                width: 90%;
+              }
+              
+              .flex-box {
+                display: flex;
+                justify-content: center;
+              }
+            </style>
+            
+              <section class="">
+                <h1>TEXT EDITOR</h1>
+                <div class="flex-box">
+                  <div>
+                    <div>
+                      <button type="button"
+                          onclick="f1()"
+                          title="Bold Text">
+                  Bold</button>
+                      <button type="button"
+                          onclick="f2()"
+                          title="Italic Text">
+                  Italic</button>
+                      <button type="button"
+                          onclick="f10()"
+                          title="Underlined Text">
+                  Underlined</button>
+                      <button type="button"
+                          onclick="f3()"
+                          title="Left Align">
+                  <i class="fas fa-align-left"></i></button>
+                      <button type="button"
+                          onclick="f4()"
+                          title="Center Align">
+                  <i class="fas fa-align-center"></i></button>
+                      <button type="button"
+                          onclick="f5()"
+                          title="Right Align">
+                  <i class="fas fa-align-right"></i></button>
+                  <button type="button"
+                      onclick="f6()"
+                      title="Uppercase Text">
+              Upper Case</button>
+                  <button type="button"
+                      onclick="f7()"
+                      title="Lowercase Text">
+              Lower Case</button>
+                  <button type="button"
+                      onclick="f8()"
+                      title="Capitalize Text">
+              Capitalize</button>
+                  <input type="color"
+                      title="Color"
+                      id="colorPicker">
+                  <button type="button"
+                      onclick="f9()"
+                      title="Tooltip on top">
+              Clear Text</button>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div>
+              <div>
+              <textarea id="textarea1"
+                  class="input shadow"
+                  name="name"
+                  rows="15"
+                  cols="100"
+                  placeholder="Your text here ">
+              </textarea>
+            </div>
+          </div>
+          <script src="js/task6-variant4.js"></script>
+        </section>
+        </div>
+
+        </p>
+
+        <p class="m-2">
+        <b>Варіант 7:</b><br>
+        </p>
+
+
+      <h2><a name="conclusion">Висновки</a></h2>
+        <p class="m-1">
+          В процесі виконання роботи було здобуто навички функціонального застосування JavaScript у HTML-документі. Було застосованно на практиці знання про класи, об'єкти, функції в мові JavaScript. Застосовано події та обробку подій. Отримано навички програмної взаємодії з HTML документами на основі DOM API.
+        </p>
+
+    </article>
+    </div>
+
+  <footer>
+
+    Бригада №10 | <a class="footer-repo-link" href="https://github.com/drewg3r/ubook">github-репозиторій</a> | © 2021 «Основи Frontend та Backend Розробок»
+  </footer>
+</body>
+
+</html>

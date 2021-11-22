@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block include %}
+  {{ super() }}
+  <link href="{{ url_for("static", filename="css/labs/style.css") }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <h1 class="mb-3">Тестова форма зворотнього зв'язку</h1>
+  <div>
+    <b>Ваш email: </b> {{ email }} <br>
+    <b>Ваше повідомлення: </b> {{ message }} <br>
+    <b>Дата відправки: </b> {{ date }} <br>
+    <a href="{{ url_for("lab6.lab6_feedback_form") }}">Повернутися назад</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block include %}
+  {{ super() }}
+  <link href="{{ url_for("static", filename="css/labs/style.css") }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <h1 class="mb-3">Тестова форма зворотнього зв'язку</h1>
+  <form method="POST">
+    <div class="mb-3">
+        <label for="formControlInputEmail" class="form-label">Введіть вашу адресу електронної скриньки</label>
+        <input type="email" name="email" class="form-control" id="formControlInputEmail" placeholder="email@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="formControlInputMessage" class="form-label">Введіть ваше повідомлення</label>
+        <textarea class="form-control" name="message" id="formControlInputMessage" rows="3"></textarea>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary mb-3">Надіслати</button>
+    </div>
+  </form>
+{% endblock %}

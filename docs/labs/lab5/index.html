@@ -1,0 +1,693 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Основи Frontend та Backend розробок</title>
+
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"> </script>
+  <link rel = "stylesheet" href = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"> </script>
+
+  <script type='text/javascript' src='unitegallery/js/unitegallery.min.js'></script>   
+  <link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' />
+
+  <script type='text/javascript' src='unitegallery/themes/default/ug-theme-default.js'></script> 
+  <link rel='stylesheet' href='unitegallery/themes/default/ug-theme-default.css' type='text/css' /> 
+  <script type='text/javascript' src='unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+  <link rel='stylesheet' href='unitegallery/themes/tiles/ug-theme-tiles.css' type='text/css' /> 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="BttrLazyLoading/bttrlazyloading.min.css" />
+  <script src="BttrLazyLoading/jquery.bttrlazyloading.min.js"></script>
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/dynamic-elememts.js" language="javascript"></script>
+  <script src="js/unitegallery-example.js" language="javascript"></script>
+</head>
+
+
+<body>
+
+  <header>
+    <center>
+      <h1 class="top-header">
+        Звіти з лабораторних робіт з дисципліни<br>«Основи Frontend та Backend Розробок»
+      </h1>
+      <a class="button" href="../lab1/index.html">Лабораторна робота №1</a>
+      <a class="button" href="../lab2/index.html">Лабораторна робота №2</a>
+      <a class="button" href="../lab3/index.html">Лабораторна робота №3</a>
+      <a class="button" href="../lab4/index.html">Лабораторна робота №4</a>
+      <a class="button" href="../lab5/index.html">Лабораторна робота №5</a>
+      <a class="button" href="#">Лабораторна робота №6</a>
+      <a class="button" href="#">Лабораторна робота №7</a>
+      <a class="button" href="#">Лабораторна робота №8</a>
+      <a class="button" href="#">Лабораторна робота №9</a>
+    </center>
+  </header>
+
+    <div id="main">
+    <nav>
+      <h2>Лабораторна робота №5</h2>
+      <ul class="sidebar">
+        <li><a class="button sidebar-button" href="#subject">Постановка задачі лабораторної роботи №5</a></li>  
+        <li><a class="button sidebar-button" href="#dynamic-elements">Динамічні елементи 3 пункту</a></li>
+        <li><a class="button sidebar-button" href="#unitegallery">Галерея UniteGallery</a></li>
+        <ul class="sidebar-nested">
+          <li><a class="button sidebar-button" href="#photo-gallery">Фотогалерея</a></li>  
+          <li><a class="button sidebar-button" href="#photo-slider">Слайдер фотографій</a></li>  
+          <li><a class="button sidebar-button" href="#video-slider">Слайдер відеоматеріалів</a></li> 
+        </ul>
+        <li><a class="button sidebar-button" href="#social-media-btns">Кнопки соціальних мереж</a></li>  
+        <li><a class="button sidebar-button" href="#informers">Інформери</a></li>
+        <li><a class="button sidebar-button" href="#conclusion">Висновки</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2><a name="subject">Постановка задачі лабораторної роботи №5</a></h2>
+        <p>
+        <b>Тема:</b><br>
+          Використання в сценаріях JavaScript бібліотек крос-браузерних інтерфейсів, методів DOM. Бібліотека jQuery UI. Засоби налагодження і тестування сценаріїв JavaScript. 
+        </p>
+
+        <p>
+        <b>Мета:</b></br>
+          Здобути практичні навички роботи з jQuery UI, вміти додавати до сайту  динамічні елементи цієї бібіліотеки, плагін галереї UniteGallery, кнопки соціальних мереж, інформери та інше.
+        </p>
+    
+        <h3>Місце розташування лабораторних робіт</h3>
+        <p class="m-2">
+          <a href="https://github.com/drewg3r/ubook">Посилання на репозиторій</a>
+        </p>
+
+      <h2><a name="dynamic-elements">Динамічні елементи 3 пункту</a></h2>
+
+        <h3>Accordion</h3>
+        <p>
+        Створено елемент accordion(набір елементів, що розгортаються/згортаються).
+        </p>
+
+        <p class="m-1">
+          <div class="accordion">
+            <a>Частина 1</a>
+              <p>
+                Текст першої частини
+              </p>
+            <a>Частина 2</a>
+              <p>
+                Текст другої частини
+              </p>
+            <a>Частина 3</a>
+               <p>
+                Текст третьої частини
+              </p>
+            <a>Частина 4</a>
+              <p>
+                Текст четвертої частини 
+              </p>
+          </div>
+        </p>
+
+        <p class="m-1">
+        <b>HTML-код</b>
+        <code>
+            <pre class="m-2">
+&lt;div class=&quot;accordion&quot;&gt;
+  &lt;a&gt;Частина 1&lt;/a&gt;
+    &lt;p&gt;
+      Текст першої частини
+    &lt;/p&gt;
+  &lt;a&gt;Частина 2&lt;/a&gt;
+    &lt;p&gt;
+      Текст другої частини
+    &lt;/p&gt;
+  &lt;a&gt;Частина 3&lt;/a&gt;
+     &lt;p&gt;
+      Текст третьої частини
+    &lt;/p&gt;
+  &lt;a&gt;Частина 4&lt;/a&gt;
+    &lt;p&gt;
+      Текст четвертої частини 
+    &lt;/p&gt;
+&lt;/div&gt;</pre>
+          </code>
+           <p class="m-1">
+        <b>JavaScript-код</b>
+        <code>
+            <pre class="m-2">
+  $(&quot;.accordion&quot;).accordion();</pre>
+          </code>
+
+        <h3>Slider</h3>
+        <p>
+        Створено елемент slider(вибір числа за допомогою повзунка).
+        </p>
+
+        <p class="m-1">
+          <div class="slider"></div>
+          <b>Значенння повзунка: <a class="slider-result"></a></b>
+        </p>
+
+        <b class="m-1">HTML-код</b>
+        <code>
+            <pre class="m-2">
+&lt;div class=&quot;slider&quot;&gt;&lt;/div&gt;
+&lt;b&gt;Значенння повзунка: &lt;a class=&quot;slider-result&quot;&gt;&lt;/a&gt;&lt;/b&gt;</pre>
+          </code>
+           <p class="m-1">
+        <b>JavaScript-код</b>
+        <code>
+            <pre class="m-2">
+$(&quot;.slider&quot;).slider({
+  animate: &quot;slow&quot;,
+  range: &quot;min&quot;,    
+  values: 5,
+  max: 10,
+  slide : function(event, ui) {
+    $(&quot;.slider-result&quot;).text(ui.value);
+  }
+});</pre>
+          </code>
+
+        <h3>Tabs</h3>
+        <p>
+        Створено елемент tabs(організація вкладок на сторінц).
+        </p>
+
+        <p class="m-1">
+          <div class="tabs">
+            <ul>
+              <li><a href="#tab-1">Частина 1</a></li>
+              <li><a href="#tab-2">Частина 2</a></li>
+              <li><a href="#tab-3">Частина 3</a></li>
+              <li><a href="#tab-4">Частина 4</a></li>
+            </ul>
+            <div id="tab-1">
+              <p>
+                Текст першої частини
+              </p>
+            </div>
+            <div id="tab-2">
+              <p>
+                Текст другої частини
+              </p>
+            </div>
+            <div id="tab-3">
+               <p>
+                Текст третьої частини
+              </p>
+            </div>
+            <div id="tab-4">
+              <p>
+                Текст четвертої частини 
+              </p>
+            </div>
+          </div>
+        </p>
+
+        <b class="m-1">HTML-код</b>
+        <code>
+            <pre class="m-2">
+&lt;div class=&quot;tabs&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#tab-1&quot;&gt;Частина 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#tab-2&quot;&gt;Частина 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#tab-3&quot;&gt;Частина 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#tab-4&quot;&gt;Частина 4&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div id=&quot;tab-1&quot;&gt;
+    &lt;p&gt;
+      Текст першої частини
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;tab-2&quot;&gt;
+    &lt;p&gt;
+      Текст другої частини
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;tab-3&quot;&gt;
+     &lt;p&gt;
+      Текст третьої частини
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;tab-4&quot;&gt;
+    &lt;p&gt;
+      Текст четвертої частини 
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          </code>
+           <p class="m-1">
+        <b>JavaScript-код</b>
+        <code>
+            <pre class="m-2">
+$(&quot;.tabs&quot;).tabs();</pre>
+          </code>
+
+      <h2><a name="unitegallery">Галерея UniteGallery</a></h2>
+
+        <h3><a name="photo-gallery">Фотогалерея</a></h3>
+
+        <p class="m-1">
+          <div class="bttrlazyloading" id="gallery1" style="display:none;">
+    
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image01.jpg"
+              data-image="https://unitegallery.net/newimages/image01.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image03.jpg"
+              data-image="https://unitegallery.net/newimages/image03.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image02.jpg"
+              data-image="https://unitegallery.net/newimages/image02.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image10.jpg"
+              data-image="https://unitegallery.net/newimages/image10.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image58.jpg"
+              data-image="https://unitegallery.net/newimages/image58.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image52.jpg"
+              data-image="https://unitegallery.net/newimages/image52.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image54.jpg"
+              data-image="https://unitegallery.net/newimages/image52.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image42.jpg"
+              data-image="https://unitegallery.net/newimages/image42.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image50.jpg"
+              data-image="https://unitegallery.net/newimages/image50.jpg"
+              data-description="Опис зображення">
+          </div>
+        </p>
+
+        <p class="m-1">
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-2">
+&lt;div id=&quot;gallery1&quot; style=&quot;display:none;&quot;&gt;
+    
+  &lt;img alt=&quot;Image Title&quot;
+    src=&quot;https://unitegallery.net/newimages/image01.jpg&quot;
+    data-image=&quot;https://unitegallery.net/newimages/image01.jpg&quot;
+    data-description=&quot;Опис зображення&quot;&gt;
+  &lt;img alt=&quot;Image Title&quot;
+    src=&quot;https://unitegallery.net/newimages/image03.jpg&quot;
+    data-image=&quot;https://unitegallery.net/newimages/image03.jpg&quot;
+    data-description=&quot;Опис зображення&quot;&gt;
+  &lt;img alt=&quot;Image Title&quot;
+    src=&quot;https://unitegallery.net/newimages/image02.jpg&quot;
+    data-image=&quot;https://unitegallery.net/newimages/image02.jpg&quot;
+    data-description=&quot;Опис зображення&quot;&gt;
+&lt;/div&gt;</pre>
+          </code>
+        </p>
+
+        <p class="m-1">
+        <b>JavaScript-код</b>
+          <code>
+            <pre class="m-2">
+$(&quot;#gallery1&quot;).unitegallery({
+  gallery_theme:&quot;tiles&quot;
+});</pre>
+          </code>
+        </p>
+        
+        <h3><a name="photo-slider">Слайдер фотографій</a></h3>
+
+        <p class="m-1">
+          <div class="bttrlazyloading" id="gallery2" style="display:none;">
+    
+            <img alt="Image 1 Title" src="https://unitegallery.net/newimages/image01.jpg"
+              data-image="https://unitegallery.net/newimages/image01.jpg"
+              data-description="Image 1 Description">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image03.jpg"
+              data-image="https://unitegallery.net/newimages/image03.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image02.jpg"
+              data-image="https://unitegallery.net/newimages/image02.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image10.jpg"
+              data-image="https://unitegallery.net/newimages/image10.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image58.jpg"
+              data-image="https://unitegallery.net/newimages/image58.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image52.jpg"
+              data-image="https://unitegallery.net/newimages/image52.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image54.jpg"
+              data-image="https://unitegallery.net/newimages/image52.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image42.jpg"
+              data-image="https://unitegallery.net/newimages/image42.jpg"
+              data-description="Опис зображення">
+            <img alt="Image Title" src="https://unitegallery.net/newimages/image50.jpg"
+              data-image="https://unitegallery.net/newimages/image50.jpg"
+              data-description="Опис зображення">
+          </div>
+        </p>
+
+        <p class="m-1">
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-2">
+&lt;div id=&quot;gallery1&quot; style=&quot;display:none;&quot;&gt;
+    
+  &lt;img alt=&quot;Image Title&quot;
+    src=&quot;https://unitegallery.net/newimages/image01.jpg&quot;
+    data-image=&quot;https://unitegallery.net/newimages/image01.jpg&quot;
+    data-description=&quot;Опис зображення&quot;&gt;
+  &lt;img alt=&quot;Image Title&quot;
+    src=&quot;https://unitegallery.net/newimages/image03.jpg&quot;
+    data-image=&quot;https://unitegallery.net/newimages/image03.jpg&quot;
+    data-description=&quot;Опис зображення&quot;&gt;
+  &lt;img alt=&quot;Image Title&quot;
+    src=&quot;https://unitegallery.net/newimages/image02.jpg&quot;
+    data-image=&quot;https://unitegallery.net/newimages/image02.jpg&quot;
+    data-description=&quot;Опис зображення&quot;&gt;
+&lt;/div&gt;</pre>
+          </code>
+        </p>
+        
+        <p class="m-1">
+        <b>JavaScript-код</b>
+          <code>
+            <pre class="m-2">
+$(&quot;#gallery2&quot;).unitegallery();</pre>
+          </code>
+        </p>
+
+        <h3><a name="video-slider">Слайдер відеоматеріалів</a></h3>
+
+        <p class="m-1">
+          <div id="gallery3" style="display:none;">
+            <img alt="Youtube With Images"
+             data-type="youtube"
+             src="https://img.youtube.com/vi/BHACKCNDMW8/0.jpg"
+             data-image="https://img.youtube.com/vi/BHACKCNDMW8/0.jpg"     
+             data-videoid="BHACKCNDMW8"
+             data-description="Youtube video description">
+             <img alt="Youtube With Images"
+             data-type="youtube"
+             src="https://img.youtube.com/vi/3S1GFgH954k/0.jpg"
+             data-image="https://img.youtube.com/vi/3S1GFgH954k/0.jpg"     
+             data-videoid="3S1GFgH954k"
+             data-description="Youtube video description">
+             <img alt="Youtube With Images"
+             data-type="youtube"
+             src="https://img.youtube.com/vi/kOnIAoqQkd4/0.jpg"
+             data-image="https://img.youtube.com/vi/kOnIAoqQkd4/0.jpg"     
+             data-videoid="kOnIAoqQkd4"
+             data-description="Youtube video description">
+          </div>
+
+        </p>
+
+        <p class="m-1">
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-2">
+&lt;div id=&quot;gallery3&quot; style=&quot;display:none;&quot;&gt;
+  &lt;img alt=&quot;Youtube With Images&quot;
+   data-type=&quot;youtube&quot;
+   src=&quot;https://img.youtube.com/vi/BHACKCNDMW8/0.jpg&quot;
+   data-image=&quot;https://img.youtube.com/vi/BHACKCNDMW8/0.jpg&quot;     
+   data-videoid=&quot;BHACKCNDMW8&quot;
+   data-description=&quot;Youtube video description&quot;&gt;
+   &lt;img alt=&quot;Youtube With Images&quot;
+   data-type=&quot;youtube&quot;
+   src=&quot;https://img.youtube.com/vi/3S1GFgH954k/0.jpg&quot;
+   data-image=&quot;https://img.youtube.com/vi/3S1GFgH954k/0.jpg&quot;     
+   data-videoid=&quot;3S1GFgH954k&quot;
+   data-description=&quot;Youtube video description&quot;&gt;
+   &lt;img alt=&quot;Youtube With Images&quot;
+   data-type=&quot;youtube&quot;
+   src=&quot;https://img.youtube.com/vi/kOnIAoqQkd4/0.jpg&quot;
+   data-image=&quot;https://img.youtube.com/vi/kOnIAoqQkd4/0.jpg&quot;     
+   data-videoid=&quot;kOnIAoqQkd4&quot;
+   data-description=&quot;Youtube video description&quot;&gt;
+&lt;/div&gt;</pre>
+          </code>
+        </p>
+        
+        <p class="m-1">
+        <b>JavaScript-код</b>
+          <code>
+            <pre class="m-2">
+$(&quot;#gallery3&quot;).unitegallery();</pre>
+          </code>
+        </p>
+        
+      <h2><a name="social-media-btns">Кнопки соціальних мереж</a></h2>
+
+      <p class="m-1">
+        <div class="icons">
+          <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+          <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+          <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+          <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+          <a href="https://www.pinterest.com" class="fa fa-pinterest-p"></a>
+        </div>
+      </p>
+
+        <p class="m-1">
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-2">
+&lt;div class=&quot;icons&quot;&gt;
+  &lt;a href=&quot;https://www.facebook.com&quot; class=&quot;fa fa-facebook&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;https://www.twitter.com&quot; class=&quot;fa fa-twitter&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;https://www.instagram.com&quot; class=&quot;fa fa-instagram&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;https://www.linkedin.com&quot; class=&quot;fa fa-linkedin&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;https://www.pinterest.com&quot; class=&quot;fa fa-pinterest-p&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;</pre>
+          </code>
+        </p>
+
+      <h2><a name="informers">Інформери</a></h2>
+
+      <h3>Погода</h3>
+
+      <p class="m-1">
+        <link type="text/css" rel="stylesheet" href="https://www.meteoprog.ua/css/winformer.min.css?id=100">
+
+        <div class="meteoprog-informer" style="width: 258px; align-content: center;"
+         data-params='{"city_ids":"2533","domain":"https://www.meteoprog.ua/ua","id":"619a4a822bac92c6528b4b2e","lang":"ua"}'>
+
+      
+          <a title="Погода в місті Київ" target="_blank" href="https://www.meteoprog.ua/ua/weather/Kyiv">
+            <img style="margin: 0 auto; display: block" src="https://www.meteoprog.ua/images/preloader.gif" alt="Loading...">
+          </a>
+          <a target="_blank" class="constructor__met2wlink" href="https://www.meteoprog.ua/ua/review/Kyiv/">Погода на 2 тижні</a>
+      
+
+          <a class="constructor__metlink" target="_blank" href="https://www.meteoprog.ua/ua">
+            <img style="display: block; margin: 0 auto;" alt="Meteoprog" src="https://www.meteoprog.ua/images/meteoprog-inf.png">
+          </a>
+        </div>
+        <script type="text/javascript" src="https://www.meteoprog.ua/js/winformer.min.js?id=100"></script>
+      </p>
+
+        <p class="m-1">
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-2">
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot;
+ href=&quot;https://www.meteoprog.ua/css/winformer.min.css?id=100&quot;&gt;
+
+  &lt;div class=&quot;meteoprog-informer&quot; style=&quot;width: 258px&quot;
+   data-params='{&quot;city_ids&quot;:&quot;2533&quot;,
+                 &quot;domain&quot;:&quot;https://www.meteoprog.ua/ua&quot;,
+                 &quot;id&quot;:&quot;619a4a822bac92c6528b4b2e&quot;,
+                 &quot;lang&quot;:&quot;ua&quot;}'&gt;
+
+  &lt;a title=&quot;Погода в місті Київ&quot; target=&quot;_blank&quot;
+   href=&quot;https://www.meteoprog.ua/ua/weather/Kyiv&quot;&gt;
+    &lt;img style=&quot;margin: 0 auto; display: block&quot;
+     src=&quot;https://www.meteoprog.ua/images/preloader.gif&quot; alt=&quot;Loading...&quot;&gt;
+  &lt;/a&gt;
+  &lt;a target=&quot;_blank&quot; class=&quot;constructor__met2wlink&quot;
+   href=&quot;https://www.meteoprog.ua/ua/review/Kyiv/&quot;&gt;Погода на 2 тижні&lt;/a&gt;
+      
+
+  &lt;a class=&quot;constructor__metlink&quot; target=&quot;_blank&quot;
+   href=&quot;https://www.meteoprog.ua/ua&quot;&gt;
+    &lt;img style=&quot;display: block; margin: 0 auto;&quot; alt=&quot;Meteoprog&quot;
+     src=&quot;https://www.meteoprog.ua/images/meteoprog-inf.png&quot;&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;
+ src=&quot;https://www.meteoprog.ua/js/winformer.min.js?id=100&quot;&gt;
+&lt;/script&gt;</pre>
+          </code>
+        </p>
+        
+      <h3>Курс валют</h3>
+
+      <p class="m-1">
+        <div id="minfin-informer-m1Fn-currency">
+          Завантажуємо
+          <a href="https://minfin.com.ua/ua/currency/" target="_blank">курси валют</a>
+          від minfin.com.ua
+          </a>
+        </div>
+        <script>
+          var iframe = '<ifra'+'me width="275" height="120" fram'+'eborder="0" src="https://informer.minfin.com.ua/ua/gen/course/?color=yellow" vspace="0" scrolling="no" hspace="0" allowtransparency="true"style="width:275px;height:120px;ove'+'rflow:hidden;"></iframe>';
+          var cl = 'minfin-informer-m1Fn-currency';
+          document.getElementById(cl).innerHTML = iframe;
+        </script>
+        <noscript>
+          <img src="https://informer.minfin.com.ua/gen/img.png" width="1" height="1" alt="minfin.com.ua: курси валют" title="Курс валют" border="0" />
+        </noscript>
+      </p>
+
+        <p class="m-1">
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-2">
+&lt;div id=&quot;minfin-informer-m1Fn-currency&quot;&gt;
+  Завантажуємо 
+  &lt;a href=&quot;https://minfin.com.ua/ua/currency/&quot; target=&quot;_blank&quot;&gt;
+    курси валют
+  &lt;/a&gt;
+  від minfin.com.ua
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  var iframe = '&lt;ifra'+'me width=&quot;275&quot;
+                height=&quot;120&quot;
+                fram'+'eborder=&quot;0&quot;
+                src=&quot;https://informer.minfin.com.ua/ua/gen/course/?color=yellow&quot;
+                vspace=&quot;0&quot;
+                scrolling=&quot;no&quot;
+                hspace=&quot;0&quot;
+                allowtransparency=&quot;true&quot;
+                style=&quot; width:275px;height:120px;ove'+'rflow:hidden;&quot;&gt;
+                &lt;/iframe&gt;';
+  var cl = 'minfin-informer-m1Fn-currency';
+            document.getElementById(cl).innerHTML = iframe;
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;img src=&quot;https://informer.minfin.com.ua/gen/img.png&quot;
+          width=&quot;1&quot; height=&quot;1&quot;
+          alt=&quot;minfin.com.ua: курси валют&quot;
+          title=&quot;Курс валют&quot; border=&quot;0&quot; /&gt;
+&lt;/noscript&gt;</pre>
+          </code>
+        </p>
+
+      <h3>Годинник</h3>
+
+      <p class="m-1">
+        <script type="text/javascript">
+          var css_file=document.createElement("link");
+          css_file.setAttribute("rel","stylesheet");
+          css_file.setAttribute("type","text/css");
+          css_file.setAttribute("href","https://s.bookcdn.com//css/cl/bw-cl-126el.css?v=0.0.1");
+          document.getElementsByTagName("head")[0].appendChild(css_file);
+        </script>
+        <div id="tw_7_106748024">
+          <div style="width:126px; height:82px; margin: 0 auto;">
+            <a href="https://hotelmix.com.ua/time/kiev-18881">Київ</a>
+            <br/>
+          </div>
+        </div>
+        <script type="text/javascript">
+          function setWidgetData_106748024(data){
+            if(typeof(data) != 'undefined' && data.results.length > 0) {
+              for(var i = 0; i < data.results.length; ++i) {
+                var objMainBlock = '';
+                var params = data.results[i];
+                objMainBlock = document.getElementById('tw_'+params.widget_type+'_'+params.widget_id);
+                if(objMainBlock !== null) objMainBlock.innerHTML = params.html_code;
+              }
+            }
+          }
+          var clock_timer_106748024 = -1; widgetSrc = "https://widgets.booked.net/time/info?ver=2;domid=;type=7;id=106748024;scode=124;city_id=18881;wlangid=29;mode=0;details=0;background=ffffff;border_color=ffffff;color=08488d;add_background=ffffff;add_color=00faff;head_color=333333;border=0;transparent=0";
+          var widgetUrl = location.href;
+          widgetSrc += '&ref=' + widgetUrl;
+          var wstrackId = "";
+          if (wstrackId) {
+            widgetSrc += ';wstrackId=' + wstrackId + ';'
+          }
+          var timeBookedScript = document.createElement("script");
+          timeBookedScript.setAttribute("type", "text/javascript");
+          timeBookedScript.src = widgetSrc;
+          document.body.appendChild(timeBookedScript);
+        </script>
+      </p>
+
+        <p class="m-1">
+        <b>HTML-код</b>
+          <code>
+            <pre class="m-2">
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var css_file=document.createElement(&quot;link&quot;);
+  css_file.setAttribute(&quot;rel&quot;,&quot;stylesheet&quot;);
+  css_file.setAttribute(&quot;type&quot;,&quot;text/css&quot;);
+  css_file.setAttribute(&quot;href&quot;,&quot;https://s.bookcdn.com//css/cl/bw-cl-126el.css?v=0.0.1&quot;);
+  document.getElementsByTagName(&quot;head&quot;)[0].appendChild(css_file);
+&lt;/script&gt;
+&lt;div id=&quot;tw_7_106748024&quot;&gt;
+  &lt;div style=&quot;width:126px; height:82px; margin: 0 auto;&quot;&gt;
+    &lt;a href=&quot;https://hotelmix.com.ua/time/kiev-18881&quot;&gt;Київ&lt;/a&gt;
+    &lt;br/&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  function setWidgetData_106748024(data){
+    if(typeof(data) != 'undefined' && data.results.length &gt; 0) {
+      for(var i = 0; i &lt; data.results.length; ++i) {
+        var objMainBlock = '';
+        var params = data.results[i];
+        objMainBlock = document.getElementById('tw_'+params.widget_type+'_'+params.widget_id);
+        if(objMainBlock !== null) objMainBlock.innerHTML = params.html_code;
+      }
+    }
+  }
+  var clock_timer_106748024 = -1;
+  widgetSrc = &quot;https://widgets.booked.net/time/info?ver=2;
+  domid=;
+  type=7;id=106748024;
+  scode=124; city_id=18881;
+  wlangid=29; mode=0;
+  details=0; background=ffffff;
+  border_color=ffffff; color=08488d;
+  add_background=ffffff;
+  add_color=00faff;head_color=333333;
+  border=0;transparent=0&quot;;
+  
+  var widgetUrl = location.href;
+  widgetSrc += '&ref=' + widgetUrl;
+  var wstrackId = &quot;&quot;;
+  if (wstrackId) {
+    widgetSrc += ';wstrackId=' + wstrackId + ';'
+  }
+  var timeBookedScript = document.createElement(&quot;script&quot;);
+  timeBookedScript.setAttribute(&quot;type&quot;, &quot;text/javascript&quot;);
+  timeBookedScript.src = widgetSrc;
+  document.body.appendChild(timeBookedScript);
+&lt;/script&gt;
+</pre>
+          </code>
+        </p>
+
+      <h2><a name="conclusion">Висновки</a></h2>
+        <p class="m-1">
+          В процесі виконання роботи було здобуто практичні навички роботи з jQuery UI. Навчились додавати до сайту  динамічні елементи цієї бібіліотеки, використовувати плагін галереї UniteGallery, створювати кнопки соціальних мереж та інформери.
+        </p>
+
+    </article>
+    </div>
+
+  <footer>
+
+    Бригада №10 | <a class="footer-repo-link" href="https://github.com/drewg3r/ubook">github-репозиторій</a> | © 2021 «Основи Frontend та Backend Розробок»
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Основи Frontend та Backend розробок</title>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"> </script>
+  <link rel = "stylesheet" href = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"> </script>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <script src="js/dynamic-elememts.js" language="javascript"></script>
+</head>
+
+
+<body>
+
+  <header>
+    <center>
+      <h1 class="top-header">
+        Звіти з лабораторних робіт з дисципліни<br>«Основи Frontend та Backend Розробок»
+      </h1>
+      <a class="button" href="../lab1/index.html">Лабораторна робота №1</a>
+      <a class="button" href="../lab2/index.html">Лабораторна робота №2</a>
+      <a class="button" href="../lab3/index.html">Лабораторна робота №3</a>
+      <a class="button" href="../lab4/index.html">Лабораторна робота №4</a>
+      <a class="button" href="../lab5/index.html">Лабораторна робота №5</a>
+      <a class="button" href="../lab6/index.html">Лабораторна робота №6</a>
+      <a class="button" href="#">Лабораторна робота №7</a>
+      <a class="button" href="#">Лабораторна робота №8</a>
+      <a class="button" href="#">Лабораторна робота №9</a>
+    </center>
+  </header>
+
+    <div id="main">
+    <nav>
+      <h2>Лабораторна робота №6</h2>
+      <ul class="sidebar">
+        <li><a class="button sidebar-button" href="#subject">Постановка задачі лабораторної роботи №6</a></li>
+        <li><a class="button sidebar-button" href="#server-installation">Встановлення та налаштування WEB-серверу</a></li>
+        <li><a class="button sidebar-button" href="#fedback-form">Форма зворотнього зв'язку</a></li>
+        <li><a class="button sidebar-button" href="#fedback-form-code">Код форми зворотнього зв'язку</a></li> 
+        <li><a class="button sidebar-button" href="#conclusion">Висновки</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2><a name="subject">Постановка задачі лабораторної роботи №4</a></h2>
+        <p>
+        <b>Тема:</b><br>
+          WEB-сервери та принципи їх роботи з користувачем. Серверні WEB-застосунки.
+        </p>
+
+        <p>
+        <b>Мета:</b></br>
+          Здобути практичні навички встановлення та конфігурування WEB-сервера.
+        </p>
+    
+        <h3>Місце розташування лабораторних робіт</h3>
+        <p class="m-2">
+          <a href="https://github.com/drewg3r/ubook">Посилання на репозиторій</a>
+        </p>
+
+      <h2><a name="server-installation">Встановлення та налаштування WEB-серверу</a></h2>
+        <p>
+        В якості мови програмування було обрано мову python з модулем flask. Flask має
+        вбудований development server, який можна використовувати при досить низькому навантаженню.
+        </p>
+
+        <b class="m-2">Кроки та скріншоти встановлення веб-сервера:</b><br>
+        <p class="m-2">
+        1. Оновлюємо список доступних пакетів та встановлюємо пакети:
+        software-properties-common, curl, python3.10 python3-pip python3.10-distutils
+        <br>
+        <img src="img/1.png">
+        <img src="img/2.png">
+        </p>
+
+        <p class="m-2">
+        2. Клонуємо репозиторій ubook.
+        <br>
+        <img src="img/3.png">
+        </p>
+
+        <p class="m-2">
+        3. Встановлюємо залежні пакети
+        <br>
+        <img src="img/4.png">
+        </p>
+
+        <p class="m-2">
+        4. Встановлюємо значення змінних оточення
+        <br>
+        <img src="img/5.png">
+        </p>
+
+        <p class="m-2">
+        5. Запускаємо веб-сервер
+        <br>
+        <img src="img/6.png">
+        </p>
+
+      <h2><a name="fedback-form">Форма зворотнього зв'язку</a></h2>
+        <img src="img/form.png">
+
+        <h3><a name="fedback-form-code">Код форми зворотнього зв'язку</a></h3>
+          <code>
+            <pre class="m-2">
+{% extends &#34;base.html&#34; %}
+
+{% block include %}
+  {{ super() }}
+  &lt;link href=&#34;{{ url_for(&#34;static&#34;, filename=&#34;css/labs/style.css&#34;) }}&#34; rel=&#34;stylesheet&#34;&gt;
+{% endblock %}
+
+{% block content %}
+  &lt;h1 class=&#34;mb-3&#34;&gt;Тестова форма зворотнього зв'язку&lt;/h1&gt;
+  &lt;form method=&#34;POST&#34;&gt;
+    &lt;div class=&#34;mb-3&#34;&gt;
+        &lt;label for=&#34;formControlInputEmail&#34; class=&#34;form-label&#34;&gt;Введіть вашу адресу електронної скриньки&lt;/label&gt;
+        &lt;input type=&#34;email&#34; name=&#34;email&#34; class=&#34;form-control&#34; id=&#34;formControlInputEmail&#34;
+        placeholder=&#34;email@example.com&#34;&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;mb-3&#34;&gt;
+        &lt;label for=&#34;formControlInputMessage&#34; class=&#34;form-label&#34;&gt;Введіть ваше повідомлення&lt;/label&gt;
+        &lt;textarea class=&#34;form-control&#34; name=&#34;message&#34; id=&#34;formControlInputMessage&#34; rows=&#34;3&#34;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;button type=&#34;submit&#34; class=&#34;btn btn-primary mb-3&#34;&gt;Надіслати&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+{% endblock %}</pre>
+        </code>
+      <h2><a name="conclusion">Висновки</a></h2>
+        <p class="m-1">
+        В процесі виконання роботи було отримано практичні навички зі
+        встановлення та налаштування WEB-серверу. З використанням мови python
+        та фреймворку flask було розроблено форму зворотнього зв'язку, для
+        демонстрації зв'язку з сервером.
+        </p>
+
+    </article>
+    </div>
+
+  <footer>
+
+    Бригада №10 | <a class="footer-repo-link" href="https://github.com/drewg3r/ubook">github-репозиторій</a> | © 2021 «Основи Frontend та Backend Розробок»
+  </footer>
+</body>
+
+</html>

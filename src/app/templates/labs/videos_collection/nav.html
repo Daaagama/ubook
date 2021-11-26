@@ -1,0 +1,19 @@
+<header class="p-3 bg-dark text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+      <a class="btn btn-outline-light me-5" href="{{ url_for("videos_collection.videos_collection_main_page") }}">Головна сторінка</a>
+
+      <form class="col-6 mb-3 mb-lg-0 me-lg-3" action="{{ url_for("videos_collection.videos_search_page") }}">
+        <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search"
+        value="{{ q }}" name="q">
+      </form>
+
+      <div class="text-end">
+        <button type="button" class="btn btn-outline-light me-4">Шукати</button>
+        <a class="btn btn-outline-light" href="{{ url_for("videos_collection.new_channel") }}">Додати канал</a>
+        <a class="btn btn-warning" href="{{ url_for("videos_collection.new_video") }}">Додати відео</a>
+      </div>
+    </div>
+  </div>
+</header>

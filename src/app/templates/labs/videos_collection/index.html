@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block include %}
+  {{ super() }}
+  <link href="{{ url_for("static", filename="css/labs/style.css") }}" rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+  {% include "labs/videos_collection/nav.html" %}
+{% endblock %}
+
+{% block content %}
+  <h1 class="mb-5">Колекція відео</h1>
+
+
+  <h2 class="mt-3">Останні додані відео</h2>
+  {% if videos %}
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      {% for video in videos %}
+        <div class="col">
+          <div class="card h-100">
+            <img src="{{ video.preview_link }}" class="card-img-top" alt="{{ video.title }}">
+            <div class="card-body">
+              <hr>
+              <a class="h5 card-title" href="{{ url_for("videos_collection.video_info_page", video_id=video.id) }}">{{ video.title }}</a>
+              <p class="card-text">
+                Додано: {{ video.date_uploaded.strftime("%d.%m.%Y") }}<br>
+                <a href="{{ url_for("videos_collection.channel_info_page", channel_id=video.channel.id) }}">{{ video.channel.name }}</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+  {% else %}
+    <b>На каналі ще немає відео</b>
+  {% endif %}
+
+
+{% endblock %}

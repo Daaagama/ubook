@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block include %}
+  {{ super() }}
+  <link href="{{ url_for("static", filename="css/labs/style.css") }}" rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+  {% include "labs/videos_collection/nav.html" %}
+{% endblock %}
+
+{% block content %}
+  <h1 class="mb-4">Створення нового каналу</h1>
+
+
+  <form method="POST">
+    <div class="mb-3">
+      <label for="channelName" class="form-label">Назва каналу</label>
+      <input type="text" name="name" class="form-control" id="channelName" >
+    </div>
+    <div class="mb-3">
+      <label for="channelDescription" class="form-label">Опис каналу</label>
+      <textarea class="form-control" name="description" id="channelDescription" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="channelLink" class="form-label">Посилання на канал</label>
+      <input type="url" name="link" class="form-control" id="channelLink" required>
+    </div>
+    <div class="mb-3">
+      <label for="channelSubs" class="form-label">Кількість підписників</label>
+      <input type="text" name="subscribers" class="form-control" id="channelSubs" required>
+    </div>
+    <div class="mb-3">
+      <label for="channelAvatar" class="form-label">Посилання на аватар каналу</label>
+      <input type="url" name="avatar" class="form-control" id="channelAvatar">
+    </div>
+
+    <div>
+      <button type="submit" class="btn btn-primary mb-3">Створити</button>
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block include %}
+  {{ super() }}
+  <link href="{{ url_for("static", filename="css/labs/style.css") }}" rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+  {% include "labs/videos_collection/nav.html" %}
+{% endblock %}
+
+{% block content %}
+  <h1 class="mb-4">Пошук</h1>
+  {% if channels %}
+    <h2 class="mb-3">Знайдені канали:</h2>
+    {% for channel in channels %}
+      <div class="row">
+        <div class="col-2">
+          <img src="{{ channel.avatar }}" alt="{{ channel.name }}" class="rounded-circle" width="128" height="128">
+        </div>
+        <div class="col-10">
+          <br><a href="channel/{{ channel.id }}">{{ channel.name }}</a><br>
+          <span>{{ channel.subscribers }} підписників</span><br>
+          <span>{{ channel.videos|length }} відео</span>
+        </div>
+      </div>
+      <hr>
+    {% endfor %}
+  {% endif %}
+  <br>
+  {% if videos %}
+    <h2 class="mb-3">Знайдені відео:</h2>
+    {% for video in videos %}
+      <a href="{{ video.video_link }}">{{ video.title }}</a>
+      <hr>
+    {% endfor %}
+  {% endif %}
+
+  {% if not channels or videos %}
+    <b>Нічого не знайдено</b>
+  {% endif %}
+{% endblock %}

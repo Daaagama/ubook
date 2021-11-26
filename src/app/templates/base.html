@@ -17,7 +17,8 @@
 </head>
 
 <body>
-  <div class="container py-3">
+  {% block navbar %} {% endblock %}
+  <div class="container py-3 content-container">
     <div>
       {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}

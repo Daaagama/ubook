@@ -1,6 +1,12 @@
 import os
+from datetime import datetime
 
 from flask import Flask, render_template
+from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+migrate = Migrate()
 
 
 def create_app(test_config=None):
@@ -15,6 +21,7 @@ def create_app(test_config=None):
         app.config.from_mapping(test_config)
 
     register_blueprints(app)
+    db_setup(app)
 
     # Render index.html template for /
     @app.route('/')
@@ -24,13 +31,23 @@ def create_app(test_config=None):
     return app
 
 
-def register_blueprints(app):
+def register_blueprints(flask_app):
     """
     Put here your blueprints to be registered
     """
-    from app.labs.views import lab6
-    app.register_blueprint(lab6.bp)
+    from app.labs.views import lab6, videos_collection
+    flask_app.register_blueprint(lab6.bp)
+    flask_app.register_blueprint(videos_collection.bp)
+
+
+def db_setup(flask_app):
+    flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    flask_app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URI")
+    db.init_app(flask_app)
+    migrate.init_app(flask_app, db)
 
 
 if __name__ == "__main__":
-    create_app().run()
+    app = create_app()
+    app.app_context().push()
+    app.run()

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block include %}
+  {{ super() }}
+  <link href="{{ url_for("static", filename="css/labs/style.css") }}" rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+  {% include "labs/videos_collection/nav.html" %}
+{% endblock %}
+
+{% block content %}
+  <h1 class="mb-4">Створення нового каналу</h1>
+
+
+  <form method="POST">
+    <div class="mb-3">
+      <label for="videoTitle" class="form-label">Назва відео</label>
+      <input type="text" name="title" class="form-control" id="videoTitle" >
+    </div>
+    <div class="mb-3">
+      <label for="date" class="form-label">Дата завантаження</label>
+      <input type="date" name="date" class="form-control" id="date" required>
+    </div>
+    <div class="mb-3">
+      <label for="previewLink" class="form-label">Посилання на превью</label>
+      <input type="url" name="preview_link" class="form-control" id="previewLink" required>
+    </div>
+    <div class="mb-3">
+      <label for="videoLink" class="form-label">Посилання на відео</label>
+      <input type="url" name="video_link" class="form-control" id="videoLink">
+    </div>
+
+    <div class="mb-3">
+      <label for="channelChoose" class="form-label">Оберіть канал</label><br>
+      {% if channels %}
+        <select name="channel" id="channelChoose">
+          {% for channel in channels %}
+            <option value="{{ channel.id }}">{{ channel.name }}</option>
+          {% endfor %}
+        </select>
+      {% else %}
+        <b>В базі даних немає каналів</b>
+      {% endif %}
+    </div>
+
+    <div>
+      <button type="submit" class="btn btn-primary mb-3">Створити</button>
+    </div>
+  </form>
+{% endblock %}

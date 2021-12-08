@@ -23,6 +23,7 @@ logger = logging.getLogger('alembic.env')
 
 
 from app.labs.models.videos_collection import *  # Migration for videos_collection models
+from app.labs.models.radio_parts import *  # Migration for radio_parts models
 
 config.set_main_option(
     'sqlalchemy.url',

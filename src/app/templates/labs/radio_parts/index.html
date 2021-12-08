@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block include %}
+  {{ super() }}
+  <link href="{{ url_for("static", filename="css/labs/style.css") }}" rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+  {% include "labs/radio_parts/nav.html" %}
+{% endblock %}
+
+{% block content %}
+  <h1 class="mb-5">Довідник з радіотехніки</h1>
+  <form method="GET">
+    <div class="row">
+      <div class="col-11">
+        <input class="form-control" type="text" placeholder="Пошук" name="q" value="{{ q }}" aria-label="search">
+      </div>
+      <div class="col-1">
+        <button type="submit" class="btn btn-outline-primary">Шукати</button>
+      </div>
+    </div>
+  </form>
+
+  {% if q %}
+    {% if radioparts %}
+      <h2 class="my-3">Результати пошуку:</h2>
+      {% for part in radioparts %}
+        <div class="row">
+          <div class="col-2">
+            <img src="{{ part.photo_link }}" alt="{{ part.name }}" width="128" height="128">
+          </div>
+          <div class="col-10">
+            <a class="h4 link-dark" href="{{ url_for("radio_parts.part_info", radiopart_id=part.id) }}">
+              {% if part.type == '1' %}
+                Транзистор
+              {% elif part.type == '2' %}
+                Конденсатор
+              {% elif part.type == '3' %}
+                Резистор
+              {% elif part.type == '4' %}
+                Блок живлення
+              {% endif %}
+              {{ part.name }}
+            </a><br><br>
+            <b>Виробник: </b>{{ part.manufacturer.name }}<br>
+            <b>Тип корпуса: </b>{{ part.package }}
+          </div>
+        </div>
+        <hr>
+      {% endfor %}
+    {% else %}
+      <h2 class="my-3">Нічого не знайдено</h2>
+    {% endif %}
+    {% else %}
+      <h4 class="mt-3">Почніть пошук або додайте радіодеталь</h4>
+    {% endif %}
+{% endblock %}

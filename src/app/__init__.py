@@ -35,9 +35,10 @@ def register_blueprints(flask_app):
     """
     Put here your blueprints to be registered
     """
-    from app.labs.views import lab6, videos_collection
+    from app.labs.views import lab6, videos_collection, radio_parts
     flask_app.register_blueprint(lab6.bp)
     flask_app.register_blueprint(videos_collection.bp)
+    flask_app.register_blueprint(radio_parts.bp)
 
 
 def db_setup(flask_app):

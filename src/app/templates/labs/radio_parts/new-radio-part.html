@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block include %}
+  {{ super() }}
+  <link href="{{ url_for("static", filename="css/labs/style.css") }}" rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+  {% include "labs/radio_parts/nav.html" %}
+{% endblock %}
+
+{% block content %}
+  {% if radiopart_name %}
+    <h1 class="mb-4">Додати радіодеталь: {{ radiopart_name }}</h1>
+
+    <form method="POST">
+    <input type="hidden" value="{{ radiopart_type }}">
+    <div class="row">
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="radioPartName" class="form-label">Макрування</label>
+          <input type="text" name="name" class="form-control" id="radioPartName" >
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="radioPartPackage" class="form-label">Тип корпусу</label>
+          <input type="text" name="package" class="form-control" id="radioPartPackage" >
+        </div>
+      </div>
+    </div>
+      <div class="mb-3">
+        <label for="photoLink" class="form-label">Посилання на фото</label>
+        <input type="url" name="photo_link" class="form-control" id="photoLink" required>
+      </div>
+      <div class="mb-3">
+        <label for="chooseManufacturer" class="form-label">Оберіть виробника</label><br>
+        {% if manufacturers %}
+          <select name="manufacturer" id="chooseManufacturer" class="form-select">
+            {% for manufacturer in manufacturers %}
+              <option value="{{ manufacturer.id }}">{{ manufacturer.name }}</option>
+            {% endfor %}
+          </select>
+        {% else %}
+          <b>Виробників не знайдено</b>
+        {% endif %}
+      </div>
+
+    {% include "labs/radio_parts/fields/"+radiopart_filename %}
+
+      <div>
+        <button type="submit" class="btn btn-primary mb-3">Створити</button>
+      </div>
+    </form>
+  {% else %}
+    Ошибка!
+  {% endif %}
+{% endblock %}

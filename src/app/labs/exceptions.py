@@ -1,6 +1,18 @@
-class ChannelNotFoundException(Exception):
-    pass
+class WebApplicationBaseException(Exception):
+    ...
 
 
-class VideoNotFoundException(Exception):
-    pass
+class ChannelNotFoundException(WebApplicationBaseException):
+    ...
+
+
+class VideoNotFoundException(WebApplicationBaseException):
+    ...
+
+
+class ManufacturerNotFoundException(WebApplicationBaseException):
+    ...
+
+
+class RadioPartNotFoundException(WebApplicationBaseException):
+    ...

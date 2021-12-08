@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block include %}
+  {{ super() }}
+  <link href="{{ url_for("static", filename="css/labs/style.css") }}" rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+  {% include "labs/radio_parts/nav.html" %}
+{% endblock %}
+
+{% block content %}
+  {% if radiopart %}
+    <h1 class="mb-4">Інформація про {{ radiopart.name }}</h1>
+
+    <div class="row">
+      <div class="col-3">
+        <img src="{{ radiopart.photo_link }}" alt="{{ radiopart.name }}" width="128" height="128">
+      </div>
+      <div class="col-9"><br>
+        <span><b>Виробник:</b> {{ radiopart.manufacturer.name }}</span><br>
+        <span><b>Корпус:</b> {{ radiopart.package }}</span>
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>Характеристики</h2>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Характеристика</th>
+        <th scope="col">Значення</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% if radiopart.type == '1' %}
+        {% include "labs/radio_parts/specs/transistor.html" %}
+      {% elif radiopart.type == '2' %}
+        {% include "labs/radio_parts/specs/capacitor.html" %}
+      {% elif radiopart.type == '3' %}
+        {% include "labs/radio_parts/specs/resistor.html" %}
+      {% elif radiopart.type == '4' %}
+        {% include "labs/radio_parts/specs/power-unit.html" %}
+      {% endif %}
+      </tbody>
+    </table>
+
+  {% else %}
+    <h1>Радіодеталь не знайдено</h1>
+  {% endif %}
+{% endblock %}

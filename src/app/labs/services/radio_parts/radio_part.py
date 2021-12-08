@@ -9,7 +9,6 @@ def get_part(radio_part_id: int) -> RadioPart:
     part = RadioPart.query.filter(RadioPart.id == radio_part_id).first()
     if not part:
         raise RadioPartNotFoundException(f"Radio part with ID{radio_part_id} was not found")
-    bool
     return part
 
 

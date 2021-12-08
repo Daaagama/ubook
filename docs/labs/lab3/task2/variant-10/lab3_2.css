@@ -1,0 +1,30 @@
+body,html{
+    margin: 0;
+    left: 0;
+    height: 100%;
+}
+.wrap{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+.block-left{
+    height: 100%;
+    background-color: orange;
+}
+.block-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.block-center header{
+    height: 60px;
+    background-color:rgb(76, 110, 202);
+}
+.block-center footer{
+    height: 60px;
+    background-color:rgb(76, 110, 202);
+}
+.block-right{
+    border-left: 2px solid;
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Основи Frontend та Backend розробок</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+</head>
+
+
+<body>
+
+  <header>
+    <center>
+      <h1 class="top-header">
+        Звіти з лабораторних робіт з дисципліни<br>«Основи Frontend та Backend Розробок»
+      </h1>
+      <a class="button" href="../lab1/index.html">Лабораторна робота №1</a>
+      <a class="button" href="../lab2/index.html">Лабораторна робота №2</a>
+      <a class="button" href="../lab3/index.html">Лабораторна робота №3</a>
+      <a class="button" href="../lab4/index.html">Лабораторна робота №4</a>
+      <a class="button" href="../lab5/index.html">Лабораторна робота №5</a>
+      <a class="button" href="../lab6/index.html">Лабораторна робота №6</a>
+      <a class="button" href="../lab7/index.html">Лабораторна робота №7</a>
+      <a class="button" href="../lab8/index.html">Лабораторна робота №8</a>
+      <a class="button" href="../lab9/index.html">Лабораторна робота №9</a>
+    </center>
+  </header>
+
+    <div id="main">
+    <nav>
+      <h2>Лабораторна робота №6</h2>
+      <ul class="sidebar">
+        <li><a class="button sidebar-button" href="#subject">Постановка задачі лабораторної роботи №7</a></li>
+        <li><a class="button sidebar-button" href="#db-objects-description">Опис об'єктів предметної галузі, які будуть в БД</a></li>
+        <li><a class="button sidebar-button" href="#infological-model">Інфологічна модель. Опис моделі</a></li>
+        <li><a class="button sidebar-button" href="#logical-data-model">Датологічна модель. Опис моделі. Зв'язки між таблицями</a></li> 
+        <li><a class="button sidebar-button" href="db-implementation">Реалізація БД</a></li>
+        <li><a class="button sidebar-button" href="#db-usage-demonstration">Введення даних в БД і виведення заних із БД. Пошук даних в БД</a></li>  
+        <li><a class="button sidebar-button" href="#conclusion">Висновки</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2><a name="subject">Постановка задачі лабораторної роботи №7</a></h2>
+        <p>
+        <b>Тема:</b><br>
+          Взаємодія WEB-застосувань з системою керування базами даних. Обробка результатів SQL-запитів.
+        </p>
+
+        <p>
+        <b>Мета:</b></br>
+          Здобути практичні навички підключення до СКБД, вибору бази даних, виконання запиту, отримання результатів, відключення від СКБД.
+        </p>
+    
+        <h3>Місце розташування лабораторних робіт</h3>
+        <p class="m-2">
+          <a href="https://github.com/drewg3r/ubook">Посилання на репозиторій</a>
+        </p>
+
+      <h2><a name="db-objects-description">Опис об'єктів предметної галузі, які будуть в БД</a></h2>
+
+        <b class="m-1">Варіант 4</b>
+        <p>
+          <b class="m-2">Завдання:</b><br>
+            <a class="m-2">Створити базу даних для фільмотеки.</a>
+
+          <p>
+            За основу бази даних взято відеотеку YouTube. БД буде мати канали, які будуть містити відео. Відео можна буде відобразити на сторінці чи переглянути за посиланням на існуюче YouTube-відео.
+          </p>
+          
+        </p>
+
+        <b class="m-1">Варіант 7</b>
+        <p>
+          <b class="m-2">Завдання:</b><br>
+            <a class="m-2">Створити базу даних для довідника з радіотехніки.</a>
+
+          <p>
+            В базі даних довідника з радіотехніки повинні бути такі сутності: довідник, радіодеталь. Радіодеталі можуть бути наступними: транзистор, резистор, конденсатор, блок живлення. Різні радіодеталі повинні мати зв'язок з сутністю радіодеталі. Таким чином буде реалізоване наслідування. Також БД матиме сутність виробника радіодеталей, яка матиме зв'язок з редіодеталлю.
+          </p>
+        </p>
+
+      <h2><a name="infological-model">Інфологічна модель. Опис моделі</a></h2>
+        <b class="m-1">Варіант 4</b>
+        <p>
+          <img src="var4/db_infological.png"></img>
+        </p>
+
+        <b class="m-1">Варіант 7</b>
+        <p>
+          <img src="var7/db_infological.png"></img>
+        </p>
+
+
+      <h2><a name="logical-data-model">Датологічна модель. Опис моделі. Зв'язки між таблицями</a></h2>
+        
+        <b class="m-1">Варіант 4</b>
+        <p>
+          <img src="var4/db_datalogical.png"></img>
+        </p>
+
+        <b class="m-1">Варіант 7</b>
+        <p>
+          <img src="var7/db_datalogical.png"></img>
+        </p>
+
+      <h2><a name="db-implementation">Реалізація БД</a></h2>
+
+        <b class="m-1">Встановлення програми</b>
+
+        <img src="img/step1.png"></img>
+
+        <b class="m-1">Ствоення серверу для бази даних</b>
+
+        <img src="img/step2.png"></img>
+        
+         <b class="m-1">Створення бази даних та таблиць</b>
+
+        <img src="img/step3.png"></img>
+
+      <h2><a name="db-usage-demonstration">Введення даних в БД і виведення заних із БД. Пошук даних в БД</a></h2>
+        
+        Для демонстрації роботи з базою даних будо розроблено окремі сторінки.
+
+      <h2><a name="conclusion">Висновки</a></h2>
+        <p class="m-1">
+        В процесі виконання роботи було досягнуто поставленої мети: здобуто практичні навички підключення до СКБД, вибору бази даних, виконання запитів, отримання результатів, відключення від СКБД.
+        </p>
+
+    </article>
+    </div>
+
+  <footer>
+
+    Бригада №10 | <a class="footer-repo-link" href="https://github.com/drewg3r/ubook">github-репозиторій</a> | © 2021 «Основи Frontend та Backend Розробок»
+  </footer>
+</body>
+
+</html>
